@@ -57,8 +57,8 @@ created: 2026-04-17
 | 1-04-01 | 01-04 | 2 | ABUT-01 | e2e | `npx playwright test --grep "about page"` | ❌ W0 | ⬜ pending |
 | 1-04-02 | 01-04 | 2 | ABUT-02 | e2e | `npx playwright test --grep "team section"` | ❌ W0 | ⬜ pending |
 | 1-04-03 | 01-04 | 2 | ABUT-03 | e2e | `npx playwright test --grep "cg partnership"` | ❌ W0 | ⬜ pending |
-| 1-05-01 | 01-05 | 3 | CONV-01 | unit | `npx vitest run --grep "hubspot"` | ❌ W0 | ⬜ pending |
-| 1-05-02 | 01-05 | 3 | CONV-02 | unit | `npx vitest run --grep "supabase"` | ❌ W0 | ⬜ pending |
+| 1-05-01 | 01-05 | 3 | CONV-01 | unit | `npx vitest run --grep "submitInquiry"` | ❌ W0 | ⬜ pending |
+| 1-05-02 | 01-05 | 3 | CONV-02 | unit | `npx vitest run --grep "Supabase"` | ❌ W0 | ⬜ pending |
 | 1-05-03 | 01-05 | 3 | CONV-03 | e2e | `npx playwright test --grep "inquiry form"` | ❌ W0 | ⬜ pending |
 | 1-05-04 | 01-05 | 3 | CONV-04 | e2e | `npx playwright test --grep "media kit"` | ❌ W0 | ⬜ pending |
 | 1-05-05 | 01-05 | 3 | CONV-05 | e2e | `npx playwright test --grep "form confirmation"` | ❌ W0 | ⬜ pending |
@@ -69,13 +69,13 @@ created: 2026-04-17
 
 ## Wave 0 Requirements
 
-- [ ] `tests/unit/hubspot.test.ts` — stubs for CONV-01, CONV-02 HubSpot dual-write logic
-- [ ] `tests/unit/supabase.test.ts` — stubs for CONV-02 Supabase audit log
+- [ ] `tests/unit/submit-inquiry.test.ts` — stubs for CONV-01, CONV-02 HubSpot dual-write and Supabase audit log logic
+- [ ] `tests/unit/submit-mediakit.test.ts` — stubs for CONV-03, CONV-04 media kit submission logic
 - [ ] `tests/e2e/homepage.spec.ts` — stubs for HOME-01 through HOME-07
 - [ ] `tests/e2e/programs.spec.ts` — stubs for PROG-01 through PROG-04
 - [ ] `tests/e2e/about.spec.ts` — stubs for ABUT-01 through ABUT-03
 - [ ] `tests/e2e/conversion.spec.ts` — stubs for CONV-03 through CONV-05
-- [ ] `tests/e2e/sanity-cms.spec.ts` — stubs for INFRA-03 (Sanity live preview)
+- [ ] `tests/e2e/sanity-cms.spec.ts` — stubs for INFRA-03 (Sanity Studio accessibility)
 - [ ] `vitest.config.ts` — unit test configuration
 - [ ] `playwright.config.ts` — e2e test configuration
 
