@@ -123,22 +123,57 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFRA-01–06 | Phase 1 | Pending |
-| HOME-01–07 | Phase 1 | Pending |
-| PROG-01–04 | Phase 1 | Pending |
-| AUDN-01–04 | Phase 1 | Pending |
-| ABUT-01–03 | Phase 1 | Pending |
-| METH-01–04 | Phase 2 | Pending |
-| BLOG-01–04 | Phase 1 | Pending |
-| CASE-01–03 | Phase 2 | Pending |
-| CONV-01–05 | Phase 1 | Pending |
-| TRST-01–03 | Phase 2 | Pending |
+| INFRA-01 | Phase 1 | Pending |
+| INFRA-02 | Phase 1 | Pending |
+| INFRA-03 | Phase 1 | Pending |
+| INFRA-04 | Phase 1 | Pending |
+| INFRA-05 | Phase 1 | Pending |
+| INFRA-06 | Phase 3 | Pending |
+| HOME-01 | Phase 1 | Pending |
+| HOME-02 | Phase 1 | Pending |
+| HOME-03 | Phase 1 | Pending |
+| HOME-04 | Phase 1 | Pending |
+| HOME-05 | Phase 1 | Pending |
+| HOME-06 | Phase 1 | Pending |
+| HOME-07 | Phase 1 | Pending |
+| PROG-01 | Phase 1 | Pending |
+| PROG-02 | Phase 1 | Pending |
+| PROG-03 | Phase 1 | Pending |
+| PROG-04 | Phase 1 | Pending |
+| AUDN-01 | Phase 2 | Pending |
+| AUDN-02 | Phase 2 | Pending |
+| AUDN-03 | Phase 2 | Pending |
+| AUDN-04 | Phase 2 | Pending |
+| ABUT-01 | Phase 1 | Pending |
+| ABUT-02 | Phase 1 | Pending |
+| ABUT-03 | Phase 1 | Pending |
+| METH-01 | Phase 3 | Pending |
+| METH-02 | Phase 3 | Pending |
+| METH-03 | Phase 3 | Pending |
+| METH-04 | Phase 3 | Pending |
+| BLOG-01 | Phase 2 | Pending |
+| BLOG-02 | Phase 2 | Pending |
+| BLOG-03 | Phase 2 | Pending |
+| BLOG-04 | Phase 2 | Pending |
+| CASE-01 | Phase 2 | Pending |
+| CASE-02 | Phase 2 | Pending |
+| CASE-03 | Phase 2 | Pending |
+| CONV-01 | Phase 1 | Pending |
+| CONV-02 | Phase 1 | Pending |
+| CONV-03 | Phase 1 | Pending |
+| CONV-04 | Phase 1 | Pending |
+| CONV-05 | Phase 1 | Pending |
+| TRST-01 | Phase 2 | Pending |
+| TRST-02 | Phase 2 | Pending |
+| TRST-03 | Phase 2 | Pending |
 
 **Coverage:**
-- v1 requirements: 38 total
-- Mapped to phases: 38
+- v1 requirements: 43 total
+- Mapped to phases: 43
 - Unmapped: 0 ✓
+
+Note: Initial traceability table showed 38 requirements; actual count is 43. The discrepancy was in the original draft traceability groupings.
 
 ---
 *Requirements defined: 2026-04-17*
-*Last updated: 2026-04-17 after initial definition*
+*Last updated: 2026-04-17 — traceability updated after roadmap creation*
