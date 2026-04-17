@@ -1,14 +1,16 @@
-import { test } from '@playwright/test'
-
-// Stub tests for Plan 01-02 (homepage implementation)
-// These will be filled in when homepage sections are built
+import { test, expect } from '@playwright/test'
 
 test.describe('homepage hero', () => {
   test('hero section renders with IT decision-makers and MSPs/MSSPs named', async ({ page }) => {
-    test.todo()
+    await page.goto('/')
+    const hero = page.locator('section').first()
+    await expect(hero).toContainText(/MSP|MSSP/i)
   })
   test('primary CTA button is visible and links to /contact', async ({ page }) => {
-    test.todo()
+    await page.goto('/')
+    const cta = page.getByRole('link', { name: /contact|start|conversation/i }).first()
+    await expect(cta).toBeVisible()
+    await expect(cta).toHaveAttribute('href', /\/contact/)
   })
 })
 
@@ -38,12 +40,17 @@ test.describe('social proof', () => {
 
 test.describe('blog preview', () => {
   test('blog preview section is hidden when no posts exist', async ({ page }) => {
-    test.todo()
+    await page.goto('/')
+    // No blog grid should be present in Phase 1 (no posts)
+    const blogCards = page.locator('[data-testid="blog-card"]')
+    await expect(blogCards).toHaveCount(0)
   })
 })
 
 test.describe('footer cta', () => {
   test('footer CTA renders with inquiry and media kit paths', async ({ page }) => {
-    test.todo()
+    await page.goto('/')
+    await expect(page.getByRole('link', { name: /contact|inquiry/i })).toBeVisible()
+    await expect(page.getByRole('link', { name: /media kit/i })).toBeVisible()
   })
 })
