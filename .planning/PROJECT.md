@@ -35,7 +35,7 @@ Tech vendor marketers land on the site, immediately understand who Ab2bm reaches
 
 - **Partnership**: Conversational Geek (Nick's company) is partnering with Ab2bm to produce content. CG is also building this site.
 - **Existing site**: advanceb2bmedia.com — not a good reference. New site starts from scratch conceptually.
-- **Phase 1 approach**: Nick will provide a list of B2B media/lead gen vendor competitors. Research agents will visit those sites, identify standard site sections, page structures, and messaging patterns, then define what "parity" means for Ab2bm.
+- **Phase 1 approach**: Competitor list lives at `docs/media-companies.md`. Research agents will visit those sites, identify standard site sections, page structures, and messaging patterns, then define what "parity" means for Ab2bm.
 - **Audience nuance**: Ab2bm's audience includes MSPs and MSSPs in addition to typical IT practitioners and IT buyer/decision-maker personas.
 - **Content role**: CG creates full-funnel content targeting IT pros (the leads), which enriches Ab2bm's content library and makes their audience more valuable to buyers.
 
