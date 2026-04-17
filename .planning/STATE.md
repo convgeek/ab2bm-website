@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: verifying
-stopped_at: Plan 01-05 complete — conversion layer code committed; Task 3 end-to-end HubSpot verification deferred pending credentials
-last_updated: "2026-04-17T20:01:45.903Z"
+stopped_at: Completed 02-01-PLAN.md — Wave 0 test scaffolding for all Phase 2 routes
+last_updated: "2026-04-17T21:39:45.767Z"
 last_activity: 2026-04-17 — Plan 01-05 (conversion layer) complete
 progress:
   total_phases: 3
   completed_phases: 1
-  total_plans: 5
-  completed_plans: 5
-  percent: 100
+  total_plans: 11
+  completed_plans: 6
+  percent: 55
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-17)
 
 **Core value:** Tech vendor marketers land on the site, immediately understand who Ab2bm reaches and how, and feel confident enough to start a conversation
-**Current focus:** Phase 1 — Foundation and Core Pages
+**Current focus:** Phase 2 — Content and Proof Layer
 
 ## Current Position
 
-Phase: 1 of 3 (Foundation and Core Pages) — COMPLETE
-Plan: 5 of 5 in current phase (Plan 01-05 complete)
-Status: Phase 1 complete — awaiting HubSpot credentials for end-to-end verification before Phase 2
-Last activity: 2026-04-17 — Plan 01-05 (conversion layer) complete
+Phase: 2 of 3 (Content and Proof Layer) — IN PROGRESS
+Plan: 1 of 6 in current phase (Plan 02-01 complete)
+Status: Wave 0 test scaffolding complete — ready for implementation plans
+Last activity: 2026-04-17 — Plan 02-01 (Wave 0 test scaffolding) complete
 
-Progress: [██████████] 100%
+Progress: [██████░░░░] 55%
 
 ## Performance Metrics
 
@@ -53,6 +53,7 @@ Progress: [██████████] 100%
 | Phase 01-foundation-and-core-pages P02 | 4 min | 2 tasks | 13 files |
 | Phase 01-foundation-and-core-pages P03 | 15 | 2 tasks | 4 files |
 | Phase 01-foundation-and-core-pages P04 | 10 | 2 tasks | 5 files |
+| Phase 02-content-and-proof-layer P01 | 8 | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -80,6 +81,8 @@ Recent decisions affecting current work:
 - [Phase 01-05]: HubSpot auth is split — Forms API uses no Authorization header; CRM Deals API uses Bearer HUBSPOT_PRIVATE_APP_TOKEN
 - [Phase 01-05]: DEV_MOCK_HUBSPOT=true skips all HubSpot calls, returns { success: true, dev: true } — allows UI development without credentials
 - [Phase 01-05]: Task 3 end-to-end HubSpot + Supabase verification deferred — requires HubSpot account setup; see 01-05-SUMMARY.md Deferred Items section
+- [Phase 02-content-and-proof-layer]: BLOG-03 and CASE-01 count assertions are Wave 0 stubs — only pass after Sanity content published in Wave 4
+- [Phase 02-content-and-proof-layer]: data-testid locators are canonical Playwright selector strategy for Phase 2 components (persona-card, audience-stats, logo-strip, testimonial-highlight, case-study-highlight, etc.)
 
 ### Pending Todos
 
@@ -95,6 +98,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-04-17T20:30:00.000Z
-Stopped at: Plan 01-05 complete — conversion layer code committed; Task 3 end-to-end HubSpot verification deferred pending credentials
+Last session: 2026-04-17T21:39:45.765Z
+Stopped at: Completed 02-01-PLAN.md — Wave 0 test scaffolding for all Phase 2 routes
 Resume file: None

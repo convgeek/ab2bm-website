@@ -33,10 +33,10 @@
 
 ### Audience Page
 
-- [ ] **AUDN-01**: Audience page explicitly names and describes MSPs and MSSPs as distinct audience segments (no competitor does this — key differentiator)
-- [ ] **AUDN-02**: Audience page includes IT practitioner, IT decision-maker/exec, MSP, and MSSP persona cards with job titles and company profiles
-- [ ] **AUDN-03**: Audience page includes quantified audience size claims with a methodology note explaining how audience is built and verified
-- [ ] **AUDN-04**: Audience page includes industry/vertical breakdown and company size distribution
+- [x] **AUDN-01**: Audience page explicitly names and describes MSPs and MSSPs as distinct audience segments (no competitor does this — key differentiator)
+- [x] **AUDN-02**: Audience page includes IT practitioner, IT decision-maker/exec, MSP, and MSSP persona cards with job titles and company profiles
+- [x] **AUDN-03**: Audience page includes quantified audience size claims with a methodology note explaining how audience is built and verified
+- [x] **AUDN-04**: Audience page includes industry/vertical breakdown and company size distribution
 
 ### About Page
 
@@ -53,16 +53,16 @@
 
 ### Blog / Resources
 
-- [ ] **BLOG-01**: Blog section exists at `/resources` or `/blog` with a listing page and individual post pages
-- [ ] **BLOG-02**: Blog posts are authored and managed through Sanity CMS by the CG team
-- [ ] **BLOG-03**: At least 6 CG-authored posts exist at launch
+- [x] **BLOG-01**: Blog section exists at `/resources` or `/blog` with a listing page and individual post pages
+- [x] **BLOG-02**: Blog posts are authored and managed through Sanity CMS by the CG team
+- [x] **BLOG-03**: At least 6 CG-authored posts exist at launch
 - [ ] **BLOG-04**: Blog posts are full-funnel content targeting IT pros (the audience), not demand gen buyers
 
 ### Case Studies
 
-- [ ] **CASE-01**: At least 3 case studies exist at launch (named or anonymized with industry + outcome metrics)
-- [ ] **CASE-02**: Case studies are managed through Sanity CMS
-- [ ] **CASE-03**: Case studies appear in a dedicated section and as a homepage highlight
+- [x] **CASE-01**: At least 3 case studies exist at launch (named or anonymized with industry + outcome metrics)
+- [x] **CASE-02**: Case studies are managed through Sanity CMS
+- [x] **CASE-03**: Case studies appear in a dedicated section and as a homepage highlight
 
 ### Conversion
 
@@ -74,9 +74,9 @@
 
 ### Trust Signals
 
-- [ ] **TRST-01**: Client/partner logo strip is present on homepage and at least one other high-traffic page
+- [x] **TRST-01**: Client/partner logo strip is present on homepage and at least one other high-traffic page
 - [ ] **TRST-02**: Logos have explicit client permission before display
-- [ ] **TRST-03**: At least one testimonial with real attribution (name, title, company) appears on the site
+- [x] **TRST-03**: At least one testimonial with real attribution (name, title, company) appears on the site
 
 ---
 
@@ -140,10 +140,10 @@
 | PROG-02 | Phase 1 | Complete |
 | PROG-03 | Phase 1 | Complete |
 | PROG-04 | Phase 1 | Complete |
-| AUDN-01 | Phase 2 | Pending |
-| AUDN-02 | Phase 2 | Pending |
-| AUDN-03 | Phase 2 | Pending |
-| AUDN-04 | Phase 2 | Pending |
+| AUDN-01 | Phase 2 | Complete |
+| AUDN-02 | Phase 2 | Complete |
+| AUDN-03 | Phase 2 | Complete |
+| AUDN-04 | Phase 2 | Complete |
 | ABUT-01 | Phase 1 | Complete |
 | ABUT-02 | Phase 1 | Complete |
 | ABUT-03 | Phase 1 | Complete |
@@ -151,21 +151,21 @@
 | METH-02 | Phase 3 | Pending |
 | METH-03 | Phase 3 | Pending |
 | METH-04 | Phase 3 | Pending |
-| BLOG-01 | Phase 2 | Pending |
-| BLOG-02 | Phase 2 | Pending |
-| BLOG-03 | Phase 2 | Pending |
+| BLOG-01 | Phase 2 | Complete |
+| BLOG-02 | Phase 2 | Complete |
+| BLOG-03 | Phase 2 | Complete |
 | BLOG-04 | Phase 2 | Pending |
-| CASE-01 | Phase 2 | Pending |
-| CASE-02 | Phase 2 | Pending |
-| CASE-03 | Phase 2 | Pending |
+| CASE-01 | Phase 2 | Complete |
+| CASE-02 | Phase 2 | Complete |
+| CASE-03 | Phase 2 | Complete |
 | CONV-01 | Phase 1 | Complete |
 | CONV-02 | Phase 1 | Complete |
 | CONV-03 | Phase 1 | Complete |
 | CONV-04 | Phase 1 | Complete |
 | CONV-05 | Phase 1 | Complete |
-| TRST-01 | Phase 2 | Pending |
+| TRST-01 | Phase 2 | Complete |
 | TRST-02 | Phase 2 | Pending |
-| TRST-03 | Phase 2 | Pending |
+| TRST-03 | Phase 2 | Complete |
 
 **Coverage:**
 - v1 requirements: 43 total
