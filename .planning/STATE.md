@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Plan 01-03 complete — programs page, ProgramCard, ProgramInquiryCta, and e2e tests committed
-last_updated: "2026-04-17T19:40:46.488Z"
+stopped_at: Plan 01-04 complete — about page, CompanyStory, TeamGrid, CgPartnership, and e2e tests committed
+last_updated: "2026-04-17T19:44:18.825Z"
 last_activity: 2026-04-17 — Plan 01-01 (scaffold) complete
 progress:
   total_phases: 3
   completed_phases: 0
   total_plans: 5
-  completed_plans: 3
-  percent: 40
+  completed_plans: 4
+  percent: 80
 ---
 
 # Project State
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-04-17)
 ## Current Position
 
 Phase: 1 of 3 (Foundation and Core Pages)
-Plan: 1 of 5 in current phase
+Plan: 4 of 5 in current phase (Plan 01-04 complete; Plan 01-05 next)
 Status: In progress
-Last activity: 2026-04-17 — Plan 01-01 (scaffold) complete
+Last activity: 2026-04-17 — Plan 01-04 (about page) complete
 
-Progress: [████░░░░░░] 40%
+Progress: [████████░░] 80%
 
 ## Performance Metrics
 
@@ -52,6 +52,7 @@ Progress: [████░░░░░░] 40%
 *Updated after each plan completion*
 | Phase 01-foundation-and-core-pages P02 | 4 min | 2 tasks | 13 files |
 | Phase 01-foundation-and-core-pages P03 | 15 | 2 tasks | 4 files |
+| Phase 01-foundation-and-core-pages P04 | 10 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -73,6 +74,8 @@ Recent decisions affecting current work:
 - [Phase 01-02]: BlogPreview returns null when posts empty — intentional Phase 1 behavior per RESEARCH.md Pitfall 6
 - [Phase 01-03]: ProgramData interface declared explicitly — prevents TypeScript error from FALLBACK_PROGRAMS null fields being incompatible with PortableTextBlock[] return
 - [Phase 01-03]: Playwright CTA test scoped to main element — header nav Contact link matches program regex causing false positives without scope boundary
+- [Phase 01-04]: Playwright CG partnership test scoped to [data-testid=cg-partnership] locator — footer also contains a Conversational Geek link, causing strict mode violation without scope boundary
+- [Phase 01-04]: TeamGrid renders placeholder members when members array is empty — page is never blank at Phase 1 before Sanity is provisioned
 
 ### Pending Todos
 
@@ -87,6 +90,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-04-17T19:40:46.486Z
-Stopped at: Plan 01-03 complete — programs page, ProgramCard, ProgramInquiryCta, and e2e tests committed
+Last session: 2026-04-17T19:44:18.823Z
+Stopped at: Plan 01-04 complete — about page, CompanyStory, TeamGrid, CgPartnership, and e2e tests committed
 Resume file: None

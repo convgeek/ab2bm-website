@@ -40,9 +40,9 @@
 
 ### About Page
 
-- [ ] **ABUT-01**: About page tells the Ab2bm company story and mission
-- [ ] **ABUT-02**: About page includes team section with real names and photos
-- [ ] **ABUT-03**: About page surfaces the Conversational Geek content partnership and what it means for audience quality
+- [x] **ABUT-01**: About page tells the Ab2bm company story and mission
+- [x] **ABUT-02**: About page includes team section with real names and photos
+- [x] **ABUT-03**: About page surfaces the Conversational Geek content partnership and what it means for audience quality
 
 ### Methodology Page
 
@@ -144,9 +144,9 @@
 | AUDN-02 | Phase 2 | Pending |
 | AUDN-03 | Phase 2 | Pending |
 | AUDN-04 | Phase 2 | Pending |
-| ABUT-01 | Phase 1 | Pending |
-| ABUT-02 | Phase 1 | Pending |
-| ABUT-03 | Phase 1 | Pending |
+| ABUT-01 | Phase 1 | Complete |
+| ABUT-02 | Phase 1 | Complete |
+| ABUT-03 | Phase 1 | Complete |
 | METH-01 | Phase 3 | Pending |
 | METH-02 | Phase 3 | Pending |
 | METH-03 | Phase 3 | Pending |
