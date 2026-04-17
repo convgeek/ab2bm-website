@@ -16,20 +16,20 @@
 
 ### Homepage
 
-- [ ] **HOME-01**: Homepage has a hero section with a specific headline covering IT decision-makers AND MSPs/MSSPs (both audiences named, neither primary) and a clear primary CTA
-- [ ] **HOME-02**: Homepage has a client/partner logo strip below the hero as an immediate credibility signal
-- [ ] **HOME-03**: Homepage has a programs overview section summarizing content syndication and webinar programs with CTAs to program detail pages
-- [ ] **HOME-04**: Homepage has an audience statistics section with quantified claims (persona breakdown, total reach, MSP/MSSP count)
-- [ ] **HOME-05**: Homepage has a case study or testimonial highlight (at minimum one result with attribution)
-- [ ] **HOME-06**: Homepage has a blog/resources preview section showing the 3 most recent posts
-- [ ] **HOME-07**: Homepage ends with a conversion section (inquiry CTA + media kit download option)
+- [x] **HOME-01**: Homepage has a hero section with a specific headline covering IT decision-makers AND MSPs/MSSPs (both audiences named, neither primary) and a clear primary CTA
+- [x] **HOME-02**: Homepage has a client/partner logo strip below the hero as an immediate credibility signal
+- [x] **HOME-03**: Homepage has a programs overview section summarizing content syndication and webinar programs with CTAs to program detail pages
+- [x] **HOME-04**: Homepage has an audience statistics section with quantified claims (persona breakdown, total reach, MSP/MSSP count)
+- [x] **HOME-05**: Homepage has a case study or testimonial highlight (at minimum one result with attribution)
+- [x] **HOME-06**: Homepage has a blog/resources preview section showing the 3 most recent posts
+- [x] **HOME-07**: Homepage ends with a conversion section (inquiry CTA + media kit download option)
 
 ### Programs Page
 
-- [ ] **PROG-01**: Programs page describes content syndication program with deliverables, audience targeting options, and what a typical campaign looks like
-- [ ] **PROG-02**: Programs page describes webinar/virtual event program with deliverables, co-hosting options, and what a typical campaign looks like
-- [ ] **PROG-03**: Each program has a dedicated inquiry CTA that pre-identifies the program type in the HubSpot deal
-- [ ] **PROG-04**: Program descriptions avoid generic jargon — they describe mechanics, not just outcomes
+- [x] **PROG-01**: Programs page describes content syndication program with deliverables, audience targeting options, and what a typical campaign looks like
+- [x] **PROG-02**: Programs page describes webinar/virtual event program with deliverables, co-hosting options, and what a typical campaign looks like
+- [x] **PROG-03**: Each program has a dedicated inquiry CTA that pre-identifies the program type in the HubSpot deal
+- [x] **PROG-04**: Program descriptions avoid generic jargon — they describe mechanics, not just outcomes
 
 ### Audience Page
 
@@ -129,17 +129,17 @@
 | INFRA-04 | Phase 1 | Complete |
 | INFRA-05 | Phase 1 | Complete |
 | INFRA-06 | Phase 3 | Pending |
-| HOME-01 | Phase 1 | Pending |
-| HOME-02 | Phase 1 | Pending |
-| HOME-03 | Phase 1 | Pending |
-| HOME-04 | Phase 1 | Pending |
-| HOME-05 | Phase 1 | Pending |
-| HOME-06 | Phase 1 | Pending |
-| HOME-07 | Phase 1 | Pending |
-| PROG-01 | Phase 1 | Pending |
-| PROG-02 | Phase 1 | Pending |
-| PROG-03 | Phase 1 | Pending |
-| PROG-04 | Phase 1 | Pending |
+| HOME-01 | Phase 1 | Complete |
+| HOME-02 | Phase 1 | Complete |
+| HOME-03 | Phase 1 | Complete |
+| HOME-04 | Phase 1 | Complete |
+| HOME-05 | Phase 1 | Complete |
+| HOME-06 | Phase 1 | Complete |
+| HOME-07 | Phase 1 | Complete |
+| PROG-01 | Phase 1 | Complete |
+| PROG-02 | Phase 1 | Complete |
+| PROG-03 | Phase 1 | Complete |
+| PROG-04 | Phase 1 | Complete |
 | AUDN-01 | Phase 2 | Pending |
 | AUDN-02 | Phase 2 | Pending |
 | AUDN-03 | Phase 2 | Pending |
