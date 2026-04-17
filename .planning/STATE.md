@@ -1,3 +1,19 @@
+---
+gsd_state_version: 1.0
+milestone: v1.0
+milestone_name: milestone
+status: executing
+stopped_at: Plan 01-02 complete — homepage sections, SiteHeader/SiteFooter, and e2e tests committed
+last_updated: "2026-04-17T19:36:08.576Z"
+last_activity: 2026-04-17 — Plan 01-01 (scaffold) complete
+progress:
+  total_phases: 3
+  completed_phases: 0
+  total_plans: 5
+  completed_plans: 2
+  percent: 40
+---
+
 # Project State
 
 ## Project Reference
@@ -14,7 +30,7 @@ Plan: 1 of 5 in current phase
 Status: In progress
 Last activity: 2026-04-17 — Plan 01-01 (scaffold) complete
 
-Progress: [█░░░░░░░░░] 7%
+Progress: [████░░░░░░] 40%
 
 ## Performance Metrics
 
@@ -34,6 +50,7 @@ Progress: [█░░░░░░░░░] 7%
 - Trend: baseline
 
 *Updated after each plan completion*
+| Phase 01-foundation-and-core-pages P02 | 4 min | 2 tasks | 13 files |
 
 ## Accumulated Context
 
@@ -49,6 +66,10 @@ Recent decisions affecting current work:
 - 01-01: NextStudio wrapped in client component to prevent SSR createContext errors in next build
 - 01-01: Singleton Sanity schemas use @ts-expect-error for __experimental_actions (runtime-only, excluded from public types)
 - 01-01: vitest configured to exclude tests/e2e/** to prevent Playwright spec incompatibility
+- [Phase 01-02]: sanityFetch wrapped in try/catch in page.tsx — build must pass without Sanity credentials
+- [Phase 01-02]: GROQ result types use explicit any helper functions — avoids requiring sanity typegen before project is provisioned
+- [Phase 01-02]: Mobile nav uses MobileMenu client component — @base-ui/react v1.4 has no Sheet; avoids adding Radix dependency
+- [Phase 01-02]: BlogPreview returns null when posts empty — intentional Phase 1 behavior per RESEARCH.md Pitfall 6
 
 ### Pending Todos
 
@@ -63,6 +84,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-04-17
-Stopped at: Plan 01-01 complete — scaffold, schemas, and test infrastructure committed; Task 1b awaiting user credentials
+Last session: 2026-04-17T19:36:08.574Z
+Stopped at: Plan 01-02 complete — homepage sections, SiteHeader/SiteFooter, and e2e tests committed
 Resume file: None

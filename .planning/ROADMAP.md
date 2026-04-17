@@ -74,6 +74,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation and Core Pages | 1/5 | In progress | - |
+| 1. Foundation and Core Pages | 2/5 | In Progress|  |
 | 2. Content and Proof Layer | 0/3 | Not started | - |
 | 3. Differentiator and Launch-Ready | 0/2 | Not started | - |
