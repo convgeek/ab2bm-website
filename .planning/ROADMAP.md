@@ -46,12 +46,15 @@ Plans:
   2. The blog/resources section has at least 6 published CG-authored posts targeting IT pros at launch, managed and editable through Sanity CMS
   3. At least 3 case studies exist (named or anonymized with industry + outcome metrics), are accessible from a dedicated case studies section, and appear as a highlight on the homepage
   4. The client/partner logo strip on the homepage and at least one other page displays logos with confirmed client permission, and at least one attributed testimonial (real name, title, company) appears on the site
-**Plans**: 5 plans
+**Plans**: 6 plans
 
 Plans:
-- [ ] 02-01: Audience page — persona cards, stats grid with verified Ab2bm data, methodology note, MSP/MSSP distinct segment sections
-- [ ] 02-02: Blog/resources — listing page, individual post pages, Sanity content type, 6+ CG posts published
-- [ ] 02-03: Case studies — listing page, individual case study pages, Sanity content type, 3 case studies published; wire homepage highlight
+- [ ] 02-01-PLAN.md — E2e test scaffolding: audience, blog, case-studies spec stubs + homepage.spec.ts todo implementations
+- [ ] 02-02-PLAN.md — Sanity schemas (post, caseStudy, audiencePage, personaCard) + GROQ queries + sanity.config.ts registration
+- [ ] 02-03-PLAN.md — Blog routes: /blog listing + /blog/[slug] individual post pages
+- [ ] 02-04-PLAN.md — Audience page: /audience route + PersonaCard component
+- [ ] 02-05-PLAN.md — Case studies: /case-studies routes + CaseStudyHighlight + homepage wiring for blog preview and featured case study
+- [ ] 02-06-PLAN.md — Content publishing checkpoint: 6+ blog posts, 3+ case studies, logos with permissions, testimonial, audience stats
 
 ### Phase 3: Differentiator and Launch-Ready
 **Goal**: The methodology page is built and makes Ab2bm's audience-building and lead delivery process concrete and credible; branded program names are applied site-wide; and the site passes Core Web Vitals on Vercel production — clearing every checklist item for launch
@@ -75,5 +78,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation and Core Pages | 5/5 | Complete   | 2026-04-17 |
-| 2. Content and Proof Layer | 0/3 | Not started | - |
+| 2. Content and Proof Layer | 0/6 | Not started | - |
 | 3. Differentiator and Launch-Ready | 0/2 | Not started | - |
