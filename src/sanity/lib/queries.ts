@@ -81,3 +81,97 @@ export const SITE_SETTINGS_QUERY = defineQuery(`
     defaultOgImage
   }
 `)
+
+// Phase 2 queries
+
+export const BLOG_LISTING_QUERY = defineQuery(`
+  *[_type == "post"] | order(publishedAt desc) {
+    _id,
+    title,
+    "slug": slug.current,
+    excerpt,
+    publishedAt,
+    author
+  }
+`)
+
+export const BLOG_POST_QUERY = defineQuery(`
+  *[_type == "post" && slug.current == $slug][0]{
+    _id,
+    title,
+    "slug": slug.current,
+    excerpt,
+    publishedAt,
+    author,
+    featuredImage{ asset->{ url }, alt },
+    body
+  }
+`)
+
+export const BLOG_PREVIEW_QUERY = defineQuery(`
+  *[_type == "post"] | order(publishedAt desc) [0...3]{
+    _id,
+    title,
+    "slug": slug.current,
+    excerpt,
+    publishedAt
+  }
+`)
+
+export const CASE_STUDIES_QUERY = defineQuery(`
+  *[_type == "caseStudy"] | order(_createdAt desc) {
+    _id,
+    title,
+    "slug": slug.current,
+    clientName,
+    industry,
+    companySize,
+    summary,
+    metrics[]{ label, value },
+    featured
+  }
+`)
+
+export const CASE_STUDY_QUERY = defineQuery(`
+  *[_type == "caseStudy" && slug.current == $slug][0]{
+    _id,
+    title,
+    "slug": slug.current,
+    clientName,
+    industry,
+    companySize,
+    summary,
+    metrics[]{ label, value },
+    featuredImage{ asset->{ url }, alt },
+    body
+  }
+`)
+
+export const FEATURED_CASE_STUDY_QUERY = defineQuery(`
+  *[_type == "caseStudy" && featured == true] | order(_createdAt desc) [0]{
+    _id,
+    title,
+    "slug": slug.current,
+    clientName,
+    industry,
+    summary,
+    metrics[0...3]{ label, value }
+  }
+`)
+
+export const AUDIENCE_PAGE_QUERY = defineQuery(`
+  *[_type == "audiencePage"][0]{
+    pageHeadline,
+    pageSubheadline,
+    methodologyNote,
+    totalAudienceStats[]{ label, value, footnote },
+    industryBreakdown[]{ vertical, percentage },
+    companySizeDistribution[]{ tier, percentage },
+    personas[]{
+      segmentName,
+      description,
+      jobTitles,
+      companyProfile
+    }
+  }
+`)
