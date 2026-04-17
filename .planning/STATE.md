@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: executing
-stopped_at: Plan 01-04 complete — about page, CompanyStory, TeamGrid, CgPartnership, and e2e tests committed
-last_updated: "2026-04-17T19:44:18.825Z"
-last_activity: 2026-04-17 — Plan 01-01 (scaffold) complete
+status: phase-complete
+stopped_at: Plan 01-05 complete — conversion layer (contact page, forms, server actions) committed; Task 3 end-to-end verification deferred pending HubSpot credentials
+last_updated: "2026-04-17T20:30:00.000Z"
+last_activity: 2026-04-17 — Plan 01-05 (conversion layer) complete
 progress:
   total_phases: 3
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 5
-  completed_plans: 4
-  percent: 80
+  completed_plans: 5
+  percent: 100
 ---
 
 # Project State
@@ -25,12 +25,12 @@ See: .planning/PROJECT.md (updated 2026-04-17)
 
 ## Current Position
 
-Phase: 1 of 3 (Foundation and Core Pages)
-Plan: 4 of 5 in current phase (Plan 01-04 complete; Plan 01-05 next)
-Status: In progress
-Last activity: 2026-04-17 — Plan 01-04 (about page) complete
+Phase: 1 of 3 (Foundation and Core Pages) — COMPLETE
+Plan: 5 of 5 in current phase (Plan 01-05 complete)
+Status: Phase 1 complete — awaiting HubSpot credentials for end-to-end verification before Phase 2
+Last activity: 2026-04-17 — Plan 01-05 (conversion layer) complete
 
-Progress: [████████░░] 80%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
@@ -76,10 +76,15 @@ Recent decisions affecting current work:
 - [Phase 01-03]: Playwright CTA test scoped to main element — header nav Contact link matches program regex causing false positives without scope boundary
 - [Phase 01-04]: Playwright CG partnership test scoped to [data-testid=cg-partnership] locator — footer also contains a Conversational Geek link, causing strict mode violation without scope boundary
 - [Phase 01-04]: TeamGrid renders placeholder members when members array is empty — page is never blank at Phase 1 before Sanity is provisioned
+- [Phase 01-05]: Supabase failure is fire-and-forget in server actions — try/catch logs but does not re-throw, HubSpot always runs (CONV-02 requirement)
+- [Phase 01-05]: HubSpot auth is split — Forms API uses no Authorization header; CRM Deals API uses Bearer HUBSPOT_PRIVATE_APP_TOKEN
+- [Phase 01-05]: DEV_MOCK_HUBSPOT=true skips all HubSpot calls, returns { success: true, dev: true } — allows UI development without credentials
+- [Phase 01-05]: Task 3 end-to-end HubSpot + Supabase verification deferred — requires HubSpot account setup; see 01-05-SUMMARY.md Deferred Items section
 
 ### Pending Todos
 
 - Task 1b: User must provision Sanity project (npx sanity@latest login + init), create Supabase inquiries table (SQL in SUMMARY), connect to Vercel (git push + npx vercel --yes), and fill in .env.local from .env.local.example
+- Plan 01-05 Task 3 (deferred): End-to-end HubSpot + Supabase verification — requires HubSpot account setup (Portal ID, Form GUIDs, Private App Token). Full checklist in 01-05-SUMMARY.md under "Deferred Items".
 
 ### Blockers/Concerns
 
@@ -90,6 +95,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-04-17T19:44:18.823Z
-Stopped at: Plan 01-04 complete — about page, CompanyStory, TeamGrid, CgPartnership, and e2e tests committed
+Last session: 2026-04-17T20:30:00.000Z
+Stopped at: Plan 01-05 complete — conversion layer code committed; Task 3 end-to-end HubSpot verification deferred pending credentials
 Resume file: None

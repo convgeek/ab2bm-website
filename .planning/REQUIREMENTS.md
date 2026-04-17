@@ -66,11 +66,11 @@
 
 ### Conversion
 
-- [ ] **CONV-01**: Contact/inquiry form submits to HubSpot Free CRM via HubSpot Forms API (Next.js Server Action — no client-side hbspt embed)
-- [ ] **CONV-02**: Inquiry form creates a deal in a HubSpot pipeline with program type, company, and contact captured
-- [ ] **CONV-03**: Media kit (audience data PDF) is available for download via a low-friction form (name + email only)
-- [ ] **CONV-04**: Media kit download form submits to HubSpot as a separate deal/contact with "media kit" source tag
-- [ ] **CONV-05**: Every program page has a program-specific CTA that routes to the inquiry form with program pre-selected
+- [x] **CONV-01**: Contact/inquiry form submits to HubSpot Free CRM via HubSpot Forms API (Next.js Server Action — no client-side hbspt embed)
+- [x] **CONV-02**: Inquiry form creates a deal in a HubSpot pipeline with program type, company, and contact captured
+- [x] **CONV-03**: Media kit (audience data PDF) is available for download via a low-friction form (name + email only)
+- [x] **CONV-04**: Media kit download form submits to HubSpot as a separate deal/contact with "media kit" source tag
+- [x] **CONV-05**: Every program page has a program-specific CTA that routes to the inquiry form with program pre-selected
 
 ### Trust Signals
 
@@ -158,11 +158,11 @@
 | CASE-01 | Phase 2 | Pending |
 | CASE-02 | Phase 2 | Pending |
 | CASE-03 | Phase 2 | Pending |
-| CONV-01 | Phase 1 | Pending |
-| CONV-02 | Phase 1 | Pending |
-| CONV-03 | Phase 1 | Pending |
-| CONV-04 | Phase 1 | Pending |
-| CONV-05 | Phase 1 | Pending |
+| CONV-01 | Phase 1 | Complete |
+| CONV-02 | Phase 1 | Complete |
+| CONV-03 | Phase 1 | Complete |
+| CONV-04 | Phase 1 | Complete |
+| CONV-05 | Phase 1 | Complete |
 | TRST-01 | Phase 2 | Pending |
 | TRST-02 | Phase 2 | Pending |
 | TRST-03 | Phase 2 | Pending |

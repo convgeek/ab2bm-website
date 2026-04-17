@@ -12,7 +12,7 @@ Three phases build Ab2bm's website in dependency order. Phase 1 constructs the e
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation and Core Pages** - Build all infrastructure, homepage, programs, about, and conversion flow — everything that can be constructed before Ab2bm delivers audience data or client permissions
+- [x] **Phase 1: Foundation and Core Pages** - Build all infrastructure, homepage, programs, about, and conversion flow — everything that can be constructed before Ab2bm delivers audience data or client permissions (completed 2026-04-17)
 - [ ] **Phase 2: Content and Proof Layer** - Populate the audience page, blog/resources, case studies, and trust signals — all gated on Ab2bm delivering real stats, client permissions, and CG completing content
 - [ ] **Phase 3: Differentiator and Launch-Ready** - Build the methodology page with branded program frameworks, validate Core Web Vitals, and confirm the site is complete and launch-ready
 
@@ -74,6 +74,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation and Core Pages | 4/5 | In Progress|  |
+| 1. Foundation and Core Pages | 5/5 | Complete   | 2026-04-17 |
 | 2. Content and Proof Layer | 0/3 | Not started | - |
 | 3. Differentiator and Launch-Ready | 0/2 | Not started | - |
