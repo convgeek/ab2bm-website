@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: verifying
-stopped_at: Completed 02-01-PLAN.md — Wave 0 test scaffolding for all Phase 2 routes
-last_updated: "2026-04-17T21:39:45.767Z"
-last_activity: 2026-04-17 — Plan 01-05 (conversion layer) complete
+status: completed
+stopped_at: Completed 02-02-PLAN.md — Sanity schemas and GROQ queries for Phase 2 content routes
+last_updated: "2026-04-17T21:42:59.781Z"
+last_activity: 2026-04-17 — Plan 02-01 (Wave 0 test scaffolding) complete
 progress:
   total_phases: 3
   completed_phases: 1
   total_plans: 11
-  completed_plans: 6
+  completed_plans: 7
   percent: 55
 ---
 
@@ -54,6 +54,7 @@ Progress: [██████░░░░] 55%
 | Phase 01-foundation-and-core-pages P03 | 15 | 2 tasks | 4 files |
 | Phase 01-foundation-and-core-pages P04 | 10 | 2 tasks | 5 files |
 | Phase 02-content-and-proof-layer P01 | 8 | 2 tasks | 4 files |
+| Phase 02-content-and-proof-layer P02 | 2 | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -83,6 +84,9 @@ Recent decisions affecting current work:
 - [Phase 01-05]: Task 3 end-to-end HubSpot + Supabase verification deferred — requires HubSpot account setup; see 01-05-SUMMARY.md Deferred Items section
 - [Phase 02-content-and-proof-layer]: BLOG-03 and CASE-01 count assertions are Wave 0 stubs — only pass after Sanity content published in Wave 4
 - [Phase 02-content-and-proof-layer]: data-testid locators are canonical Playwright selector strategy for Phase 2 components (persona-card, audience-stats, logo-strip, testimonial-highlight, case-study-highlight, etc.)
+- [Phase 02-content-and-proof-layer]: personaCard object type registered before audiencePage in sanity.config.ts — Sanity type reference resolution is order-sensitive; misordering causes Studio error 'Unknown type: personaCard'
+- [Phase 02-content-and-proof-layer]: caseStudy clientName field is optional — anonymized studies use descriptive title field; clientName left blank
+- [Phase 02-content-and-proof-layer]: Phase 2 GROQ queries appended to queries.ts without modifying Phase 1 queries — preserves existing homepage/programs/team data shapes
 
 ### Pending Todos
 
@@ -98,6 +102,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-04-17T21:39:45.765Z
-Stopped at: Completed 02-01-PLAN.md — Wave 0 test scaffolding for all Phase 2 routes
+Last session: 2026-04-17T21:42:59.779Z
+Stopped at: Completed 02-02-PLAN.md — Sanity schemas and GROQ queries for Phase 2 content routes
 Resume file: None
