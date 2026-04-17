@@ -28,7 +28,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. A visitor can navigate to the About page and read the company story, team information, and the Conversational Geek content partnership
   4. A visitor can submit an inquiry form that writes to both HubSpot (creating a deal with program type, company, and contact) and Supabase as an audit log — and a separate media kit download path exists requiring only name and email
   5. An Ab2bm staff member can open Sanity Studio, edit any piece of site content (headline, body copy, image), and see changes reflected on the live site without touching code
-**Plans**: TBD
+**Plans**: 5 plans
 
 Plans:
 - [ ] 01-01: Project scaffold — Next.js 15 App Router, Tailwind v4, shadcn/ui, Sanity v3, Supabase, GTM/analytics wiring, Vercel deployment
@@ -46,7 +46,7 @@ Plans:
   2. The blog/resources section has at least 6 published CG-authored posts targeting IT pros at launch, managed and editable through Sanity CMS
   3. At least 3 case studies exist (named or anonymized with industry + outcome metrics), are accessible from a dedicated case studies section, and appear as a highlight on the homepage
   4. The client/partner logo strip on the homepage and at least one other page displays logos with confirmed client permission, and at least one attributed testimonial (real name, title, company) appears on the site
-**Plans**: TBD
+**Plans**: 5 plans
 
 Plans:
 - [ ] 02-01: Audience page — persona cards, stats grid with verified Ab2bm data, methodology note, MSP/MSSP distinct segment sections
@@ -61,7 +61,7 @@ Plans:
   1. A visitor who asks "how do you source and validate leads?" can navigate to the Methodology page and read a plain-English explanation of how Ab2bm's audience is built and engaged, how content syndication leads are qualified and delivered, and how webinar leads are captured and delivered — all described with mechanics, not marketing language
   2. Programs across the site are referred to by branded/named framework names (not just generic "content syndication"), consistent from homepage to programs page to methodology page
   3. The site passes Core Web Vitals on Vercel production (LCP < 2.5s, CLS < 0.1, INP < 200ms) across all pages
-**Plans**: TBD
+**Plans**: 5 plans
 
 Plans:
 - [ ] 03-01: Methodology page — audience-building process, content syndication mechanics, webinar program mechanics, branded framework names
