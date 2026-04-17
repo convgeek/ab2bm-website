@@ -31,7 +31,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 5 plans
 
 Plans:
-- [ ] 01-01: Project scaffold — Next.js 15 App Router, Tailwind v4, shadcn/ui, Sanity v3, Supabase, GTM/analytics wiring, Vercel deployment
+- [x] 01-01: Project scaffold — Next.js 15 App Router, Tailwind v4, shadcn/ui, Sanity v3, Supabase, GTM/analytics wiring, Vercel deployment
 - [ ] 01-02: Homepage — all 7 sections (hero, logo strip, programs overview, audience stats, social proof, blog preview, footer CTA)
 - [ ] 01-03: Programs page — content syndication and webinar program descriptions with mechanics, pricing signals, and program-specific CTAs
 - [ ] 01-04: About page — company story, team section, CG partnership section
@@ -74,6 +74,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation and Core Pages | 0/5 | Not started | - |
+| 1. Foundation and Core Pages | 1/5 | In progress | - |
 | 2. Content and Proof Layer | 0/3 | Not started | - |
 | 3. Differentiator and Launch-Ready | 0/2 | Not started | - |

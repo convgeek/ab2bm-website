@@ -7,11 +7,11 @@
 
 ### Infrastructure
 
-- [ ] **INFRA-01**: Site is built on Next.js 15 with App Router deployed to Vercel
-- [ ] **INFRA-02**: Sanity v3 CMS is integrated with Next.js via `next-sanity` and `defineLive()` for live content preview
-- [ ] **INFRA-03**: Non-technical Ab2bm staff can edit all site content through Sanity Studio UI without touching code
-- [ ] **INFRA-04**: Google Tag Manager is installed in the root layout via `@next/third-parties` for analytics/pixel management
-- [ ] **INFRA-05**: Supabase is configured with an `inquiries` table as an audit log for form submissions
+- [x] **INFRA-01**: Site is built on Next.js 15 with App Router deployed to Vercel
+- [x] **INFRA-02**: Sanity v3 CMS is integrated with Next.js via `next-sanity` and `defineLive()` for live content preview
+- [x] **INFRA-03**: Non-technical Ab2bm staff can edit all site content through Sanity Studio UI without touching code
+- [x] **INFRA-04**: Google Tag Manager is installed in the root layout via `@next/third-parties` for analytics/pixel management
+- [x] **INFRA-05**: Supabase is configured with an `inquiries` table as an audit log for form submissions
 - [ ] **INFRA-06**: Site passes Core Web Vitals (LCP < 2.5s, CLS < 0.1, INP < 200ms) on Vercel production
 
 ### Homepage
@@ -123,11 +123,11 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFRA-01 | Phase 1 | Pending |
-| INFRA-02 | Phase 1 | Pending |
-| INFRA-03 | Phase 1 | Pending |
-| INFRA-04 | Phase 1 | Pending |
-| INFRA-05 | Phase 1 | Pending |
+| INFRA-01 | Phase 1 | Complete |
+| INFRA-02 | Phase 1 | Complete |
+| INFRA-03 | Phase 1 | Complete |
+| INFRA-04 | Phase 1 | Complete |
+| INFRA-05 | Phase 1 | Complete |
 | INFRA-06 | Phase 3 | Pending |
 | HOME-01 | Phase 1 | Pending |
 | HOME-02 | Phase 1 | Pending |
