@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 02-05-PLAN.md — case studies routes and homepage wiring
-last_updated: "2026-04-17T21:52:09.110Z"
-last_activity: 2026-04-17 — Plan 02-01 (Wave 0 test scaffolding) complete
+stopped_at: Completed 02-06-PLAN.md — content publishing checkpoint (awaiting human content delivery in Sanity Studio)
+last_updated: "2026-04-17T21:54:07.624Z"
+last_activity: 2026-04-17 — Plan 02-06 (content publishing checkpoint) reached; all code infrastructure deployed
 progress:
   total_phases: 3
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 11
-  completed_plans: 10
-  percent: 55
+  completed_plans: 11
+  percent: 64
 ---
 
 # Project State
@@ -25,12 +25,12 @@ See: .planning/PROJECT.md (updated 2026-04-17)
 
 ## Current Position
 
-Phase: 2 of 3 (Content and Proof Layer) — IN PROGRESS
-Plan: 1 of 6 in current phase (Plan 02-01 complete)
-Status: Wave 0 test scaffolding complete — ready for implementation plans
-Last activity: 2026-04-17 — Plan 02-01 (Wave 0 test scaffolding) complete
+Phase: 2 of 3 (Content and Proof Layer) — AWAITING CONTENT
+Plan: 6 of 6 in current phase (Plan 02-06 reached — content publishing checkpoint)
+Status: All Phase 2 code complete; awaiting Sanity Studio content delivery from Ab2bm and CG teams
+Last activity: 2026-04-17 — Plan 02-06 (content publishing checkpoint) reached; all code infrastructure deployed
 
-Progress: [██████░░░░] 55%
+Progress: [███████░░░] 64%
 
 ## Performance Metrics
 
@@ -97,6 +97,10 @@ Recent decisions affecting current work:
 - [Phase 02-content-and-proof-layer]: PersonaCard is a pure presentational component — named export from sections/, props-only, no data fetching
 - [Phase 02-content-and-proof-layer]: CaseStudyHighlight returns null when featuredCaseStudy is null — never shows empty section before Studio content is published
 - [Phase 02-content-and-proof-layer]: FEATURED_CASE_STUDY_QUERY and BLOG_PREVIEW_QUERY fetched separately from HOMEPAGE_QUERY — preserves existing homepage data extractor functions
+- [Phase 02-06]: Plan 02-06 is a pure human-action checkpoint — all Phase 2 code is complete; phase completion is gated on content delivery by Ab2bm and CG teams
+- [Phase 02-06]: TRST-02 is a legal requirement — no client logo may be published without confirmed written permission; permissions must be documented in STATE.md Decisions section when logos are added
+- [Phase 02-06]: Blog posts must target IT professionals (how-to guides, technical comparisons) — not demand gen messaging aimed at buyers (BLOG-03/BLOG-04 content requirement)
+- [Phase 02-06]: At least one case study must have featured: true to populate homepage CaseStudyHighlight component (CASE-01)
 
 ### Pending Todos
 
@@ -106,12 +110,13 @@ Recent decisions affecting current work:
 ### Blockers/Concerns
 
 - Task 1b external services (Sanity, Supabase, Vercel) require user credentials — cannot be automated
-- Phase 2 start is blocked until Ab2bm provides: verified audience stats (total size, MSP/MSSP counts, job function/industry breakdown), permission to use client logos, and case study data (client names or anonymized industry + outcome metrics)
-- Phase 2 start is also blocked until CG has 6+ blog posts authored and ready to publish
+- Phase 2 COMPLETION is blocked until Ab2bm publishes: 3+ case studies with outcome metrics (one featured), client logos with confirmed written permission, and at least one attributed testimonial
+- Phase 2 COMPLETION is also blocked until CG publishes 6+ blog posts targeting IT professionals in Sanity Studio
+- Full e2e suite must pass against Vercel preview URL before Phase 2 can be marked complete
 - Program naming/branding decisions (branded framework names for METH-04) should be resolved before Phase 3 begins to allow site-wide application
 
 ## Session Continuity
 
-Last session: 2026-04-17T21:52:09.108Z
-Stopped at: Completed 02-05-PLAN.md — case studies routes and homepage wiring
+Last session: 2026-04-17T21:54:07.622Z
+Stopped at: Completed 02-06-PLAN.md — content publishing checkpoint (awaiting human content delivery in Sanity Studio)
 Resume file: None

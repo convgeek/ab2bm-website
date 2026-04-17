@@ -56,7 +56,7 @@
 - [x] **BLOG-01**: Blog section exists at `/resources` or `/blog` with a listing page and individual post pages
 - [x] **BLOG-02**: Blog posts are authored and managed through Sanity CMS by the CG team
 - [x] **BLOG-03**: At least 6 CG-authored posts exist at launch
-- [ ] **BLOG-04**: Blog posts are full-funnel content targeting IT pros (the audience), not demand gen buyers
+- [x] **BLOG-04**: Blog posts are full-funnel content targeting IT pros (the audience), not demand gen buyers
 
 ### Case Studies
 
@@ -75,7 +75,7 @@
 ### Trust Signals
 
 - [x] **TRST-01**: Client/partner logo strip is present on homepage and at least one other high-traffic page
-- [ ] **TRST-02**: Logos have explicit client permission before display
+- [x] **TRST-02**: Logos have explicit client permission before display
 - [x] **TRST-03**: At least one testimonial with real attribution (name, title, company) appears on the site
 
 ---
@@ -154,7 +154,7 @@
 | BLOG-01 | Phase 2 | Complete |
 | BLOG-02 | Phase 2 | Complete |
 | BLOG-03 | Phase 2 | Complete |
-| BLOG-04 | Phase 2 | Pending |
+| BLOG-04 | Phase 2 | Complete |
 | CASE-01 | Phase 2 | Complete |
 | CASE-02 | Phase 2 | Complete |
 | CASE-03 | Phase 2 | Complete |
@@ -164,7 +164,7 @@
 | CONV-04 | Phase 1 | Complete |
 | CONV-05 | Phase 1 | Complete |
 | TRST-01 | Phase 2 | Complete |
-| TRST-02 | Phase 2 | Pending |
+| TRST-02 | Phase 2 | Complete |
 | TRST-03 | Phase 2 | Complete |
 
 **Coverage:**
