@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { sanityFetch } from '@/sanity/lib/live'
-import { HOMEPAGE_QUERY } from '@/sanity/lib/queries'
+import { HOMEPAGE_QUERY, FEATURED_CASE_STUDY_QUERY, BLOG_PREVIEW_QUERY } from '@/sanity/lib/queries'
 import { Hero } from '@/components/sections/Hero'
 import { LogoStrip } from '@/components/sections/LogoStrip'
 import { ProgramsOverview } from '@/components/sections/ProgramsOverview'
 import { AudienceStats } from '@/components/sections/AudienceStats'
 import { TestimonialHighlight } from '@/components/sections/TestimonialHighlight'
+import { CaseStudyHighlight } from '@/components/sections/CaseStudyHighlight'
 import { BlogPreview } from '@/components/sections/BlogPreview'
 import { FooterCta } from '@/components/sections/FooterCta'
 
@@ -68,6 +69,20 @@ export default async function HomePage() {
     // Sanity not configured yet — all section components handle null/empty data gracefully
   }
 
+  // Separate fetches — do NOT bundle into HOMEPAGE_QUERY (breaks existing data extractors)
+  let featuredCaseStudy: any = null
+  let blogPosts: any[] = []
+  try {
+    const [csResult, blogResult] = await Promise.all([
+      sanityFetch({ query: FEATURED_CASE_STUDY_QUERY }),
+      sanityFetch({ query: BLOG_PREVIEW_QUERY }),
+    ])
+    featuredCaseStudy = csResult.data ?? null
+    blogPosts = blogResult.data ?? []
+  } catch {
+    // Sanity not provisioned — both sections handle null/empty gracefully
+  }
+
   return (
     <main>
       <Hero
@@ -80,8 +95,8 @@ export default async function HomePage() {
       <ProgramsOverview programs={extractPrograms(homepage?.programsOverview)} />
       <AudienceStats stats={extractStats(homepage?.audienceStats)} />
       <TestimonialHighlight testimonial={extractTestimonial(homepage?.testimonialHighlight)} />
-      {/* BlogPreview is intentionally not shown in Phase 1 — blog posts are Phase 2 */}
-      <BlogPreview posts={undefined} />
+      <CaseStudyHighlight featuredCaseStudy={featuredCaseStudy} />
+      <BlogPreview posts={blogPosts} />
       <FooterCta
         headline={homepage?.footerCtaHeadline ?? ''}
         body={homepage?.footerCtaBody ?? ''}
