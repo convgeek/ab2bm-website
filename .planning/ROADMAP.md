@@ -78,5 +78,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation and Core Pages | 5/5 | Complete   | 2026-04-17 |
-| 2. Content and Proof Layer | 2/6 | In Progress|  |
+| 2. Content and Proof Layer | 3/6 | In Progress|  |
 | 3. Differentiator and Launch-Ready | 0/2 | Not started | - |

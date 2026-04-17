@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 02-02-PLAN.md — Sanity schemas and GROQ queries for Phase 2 content routes
-last_updated: "2026-04-17T21:42:59.781Z"
+stopped_at: Completed 02-03-PLAN.md — blog listing and individual post routes
+last_updated: "2026-04-17T21:46:05.750Z"
 last_activity: 2026-04-17 — Plan 02-01 (Wave 0 test scaffolding) complete
 progress:
   total_phases: 3
   completed_phases: 1
   total_plans: 11
-  completed_plans: 7
+  completed_plans: 8
   percent: 55
 ---
 
@@ -55,6 +55,7 @@ Progress: [██████░░░░] 55%
 | Phase 01-foundation-and-core-pages P04 | 10 | 2 tasks | 5 files |
 | Phase 02-content-and-proof-layer P01 | 8 | 2 tasks | 4 files |
 | Phase 02-content-and-proof-layer P02 | 2 | 2 tasks | 6 files |
+| Phase 02-content-and-proof-layer P03 | 1 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -87,6 +88,8 @@ Recent decisions affecting current work:
 - [Phase 02-content-and-proof-layer]: personaCard object type registered before audiencePage in sanity.config.ts — Sanity type reference resolution is order-sensitive; misordering causes Studio error 'Unknown type: personaCard'
 - [Phase 02-content-and-proof-layer]: caseStudy clientName field is optional — anonymized studies use descriptive title field; clientName left blank
 - [Phase 02-content-and-proof-layer]: Phase 2 GROQ queries appended to queries.ts without modifying Phase 1 queries — preserves existing homepage/programs/team data shapes
+- [Phase 02-content-and-proof-layer]: generateStaticParams returns empty array on Sanity fetch failure — blog/[slug] renders on-demand with no pre-built static paths
+- [Phase 02-content-and-proof-layer]: No export const dynamic used in blog routes — static generation via defineLive ISR pattern per RESEARCH.md
 
 ### Pending Todos
 
@@ -102,6 +105,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-04-17T21:42:59.779Z
-Stopped at: Completed 02-02-PLAN.md — Sanity schemas and GROQ queries for Phase 2 content routes
+Last session: 2026-04-17T21:46:05.747Z
+Stopped at: Completed 02-03-PLAN.md — blog listing and individual post routes
 Resume file: None
