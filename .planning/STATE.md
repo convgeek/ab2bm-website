@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 02-04-PLAN.md — audience page with persona cards and stats sections
-last_updated: "2026-04-17T21:49:20.482Z"
+stopped_at: Completed 02-05-PLAN.md — case studies routes and homepage wiring
+last_updated: "2026-04-17T21:52:09.110Z"
 last_activity: 2026-04-17 — Plan 02-01 (Wave 0 test scaffolding) complete
 progress:
   total_phases: 3
   completed_phases: 1
   total_plans: 11
-  completed_plans: 9
+  completed_plans: 10
   percent: 55
 ---
 
@@ -57,6 +57,7 @@ Progress: [██████░░░░] 55%
 | Phase 02-content-and-proof-layer P02 | 2 | 2 tasks | 6 files |
 | Phase 02-content-and-proof-layer P03 | 1 | 2 tasks | 2 files |
 | Phase 02-content-and-proof-layer P04 | 1 | 2 tasks | 2 files |
+| Phase 02-content-and-proof-layer P05 | 2 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -94,6 +95,8 @@ Recent decisions affecting current work:
 - [Phase 02-content-and-proof-layer]: methodology-note data-testid always rendered (with fallback text) so Playwright locators work before Sanity content is published
 - [Phase 02-content-and-proof-layer]: MSP and MSSP explicitly named in audience page Section 2 intro copy — satisfies AUDN-01/AUDN-02 even in empty Sanity state
 - [Phase 02-content-and-proof-layer]: PersonaCard is a pure presentational component — named export from sections/, props-only, no data fetching
+- [Phase 02-content-and-proof-layer]: CaseStudyHighlight returns null when featuredCaseStudy is null — never shows empty section before Studio content is published
+- [Phase 02-content-and-proof-layer]: FEATURED_CASE_STUDY_QUERY and BLOG_PREVIEW_QUERY fetched separately from HOMEPAGE_QUERY — preserves existing homepage data extractor functions
 
 ### Pending Todos
 
@@ -109,6 +112,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-04-17T21:49:20.480Z
-Stopped at: Completed 02-04-PLAN.md — audience page with persona cards and stats sections
+Last session: 2026-04-17T21:52:09.108Z
+Stopped at: Completed 02-05-PLAN.md — case studies routes and homepage wiring
 Resume file: None
