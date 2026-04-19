@@ -175,3 +175,44 @@ export const AUDIENCE_PAGE_QUERY = defineQuery(`
     }
   }
 `)
+
+// Phase 3 queries
+
+export const PROGRAM_BY_SLUG_QUERY = defineQuery(`
+  *[_type == "program" && slug.current == $slug][0]{
+    _id,
+    name,
+    "slug": slug.current,
+    tagline,
+    programType,
+    solutionOverview,
+    howItWorks,
+    whatYouGet,
+    bestFor,
+    ctaLabel
+  }
+`)
+
+export const ALL_PROGRAM_SLUGS_QUERY = defineQuery(`
+  *[_type == "program"]{ "slug": slug.current }
+`)
+
+export const PROGRAMS_INDEX_QUERY = defineQuery(`
+  *[_type == "program"] | order(order asc) {
+    _id,
+    name,
+    "slug": slug.current,
+    tagline,
+    programType
+  }
+`)
+
+export const METHODOLOGY_PAGE_QUERY = defineQuery(`
+  *[_type == "methodologyPage"][0]{
+    pageHeadline,
+    pageSubheadline,
+    audienceBuilding,
+    contentSyndicationProcess,
+    webinarProcess
+  }
+`)
