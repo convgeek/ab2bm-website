@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 03-03-PLAN.md (Individual program landing pages — /programs/[slug] dynamic route + 5 section components)
-last_updated: "2026-04-19T23:11:56.326Z"
+stopped_at: Completed 03-04-PLAN.md (Methodology page — /methodology route + MethodologyPage component)
+last_updated: "2026-04-19T23:15:18.815Z"
 last_activity: 2026-04-17 — Plan 02-06 (content publishing checkpoint) reached; all code infrastructure deployed
 progress:
   total_phases: 3
   completed_phases: 2
   total_plans: 17
-  completed_plans: 14
+  completed_plans: 15
   percent: 64
 ---
 
@@ -61,6 +61,7 @@ Progress: [███████░░░] 64%
 | Phase 03-differentiator-and-launch-ready P01 | 2 | 2 tasks | 2 files |
 | Phase 03-differentiator-and-launch-ready P02 | 2 | 2 tasks | 6 files |
 | Phase 03-differentiator-and-launch-ready P03 | 3 | 2 tasks | 6 files |
+| Phase 03-differentiator-and-launch-ready P04 | 4 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -111,6 +112,9 @@ Recent decisions affecting current work:
 - [Phase 03-02]: program schema fields mechanics/deliverables/targetingOptions removed (Phase 1 placeholders); replaced by solutionOverview/howItWorks/whatYouGet/bestFor structured fields
 - [Phase 03-03]: generateStaticParams returns FALLBACK_PROGRAMS slugs when Sanity unconfigured — ensures all 6 program pages pre-render at build time even before Sanity is provisioned
 - [Phase 03-03]: ProgramDetail renders nothing for null PortableText fields — cleaner UX than placeholder text; string fields always populated from fallbacks
+- [Phase 03-04]: MethodologyData interface typed explicitly on FALLBACK_METHODOLOGY constant — prevents TypeScript inference from null literals narrowing field types to null (not PortableTextBlock[] | null)
+- [Phase 03-04]: Fallback content always renders for all three methodology sections — data-testid locators always present before Sanity provisioned (RESEARCH.md Pitfall 7)
+- [Phase 03-04]: ADVANCE ENGAGE named explicitly in Section 2 heading and fallback body — satisfies METH-04 without requiring Sanity content
 
 ### Pending Todos
 
@@ -127,6 +131,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-04-19T23:11:56.324Z
-Stopped at: Completed 03-03-PLAN.md (Individual program landing pages — /programs/[slug] dynamic route + 5 section components)
+Last session: 2026-04-19T23:15:18.813Z
+Stopped at: Completed 03-04-PLAN.md (Methodology page — /methodology route + MethodologyPage component)
 Resume file: None
