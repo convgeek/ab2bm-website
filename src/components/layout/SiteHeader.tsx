@@ -1,12 +1,7 @@
 import Link from 'next/link'
 import { MobileMenu } from './MobileMenu'
-
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/programs', label: 'Programs' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
-]
+import { ProgramsDropdown } from './ProgramsDropdown'
+import { mainNavLinks } from './NavLinks'
 
 export function SiteHeader() {
   return (
@@ -24,15 +19,19 @@ export function SiteHeader() {
 
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {link.label}
-            </Link>
-          ))}
+          <Link href="/" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Home</Link>
+          <ProgramsDropdown />
+          {mainNavLinks
+            .filter(l => l.href !== '/' && l.href !== '/contact')
+            .map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {link.label}
+              </Link>
+            ))}
           <Link
             href="/contact"
             className="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
