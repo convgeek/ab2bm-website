@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 03-01-PLAN.md (Wave 0 test scaffolding)
-last_updated: "2026-04-19T23:03:44.143Z"
+stopped_at: Completed 03-02-PLAN.md (Data layer — Sanity schemas + GROQ queries + InquiryForm)
+last_updated: "2026-04-19T23:07:22.084Z"
 last_activity: 2026-04-17 — Plan 02-06 (content publishing checkpoint) reached; all code infrastructure deployed
 progress:
   total_phases: 3
   completed_phases: 2
   total_plans: 17
-  completed_plans: 12
+  completed_plans: 13
   percent: 64
 ---
 
@@ -59,6 +59,7 @@ Progress: [███████░░░] 64%
 | Phase 02-content-and-proof-layer P04 | 1 | 2 tasks | 2 files |
 | Phase 02-content-and-proof-layer P05 | 2 | 2 tasks | 5 files |
 | Phase 03-differentiator-and-launch-ready P01 | 2 | 2 tasks | 2 files |
+| Phase 03-differentiator-and-launch-ready P02 | 2 | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -104,6 +105,9 @@ Recent decisions affecting current work:
 - [Phase 02-06]: At least one case study must have featured: true to populate homepage CaseStudyHighlight component (CASE-01)
 - [Phase 03-01]: Methodology spec uses 4 test groups covering page render plus 3 section testids (METH-01/02/03) matching Phase 2 data-testid conventions
 - [Phase 03-01]: Old programs.spec.ts anchor-based tests replaced entirely — #content-syndication and #webinar IDs will not exist in refactored programs structure
+- [Phase 03-02]: content-syndication programType dropped in Phase 3 (pre-launch, no live data); replaced by advance-engage as primary content syndication product
+- [Phase 03-02]: submit-inquiry server action Zod enum updated alongside InquiryForm atomically — programType enum must match in both locations (RESEARCH.md Pitfall 1)
+- [Phase 03-02]: program schema fields mechanics/deliverables/targetingOptions removed (Phase 1 placeholders); replaced by solutionOverview/howItWorks/whatYouGet/bestFor structured fields
 
 ### Pending Todos
 
@@ -120,6 +124,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-04-19T23:03:44.141Z
-Stopped at: Completed 03-01-PLAN.md (Wave 0 test scaffolding)
+Last session: 2026-04-19T23:07:22.082Z
+Stopped at: Completed 03-02-PLAN.md (Data layer — Sanity schemas + GROQ queries + InquiryForm)
 Resume file: None
