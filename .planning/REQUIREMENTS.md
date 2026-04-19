@@ -12,7 +12,7 @@
 - [x] **INFRA-03**: Non-technical Ab2bm staff can edit all site content through Sanity Studio UI without touching code
 - [x] **INFRA-04**: Google Tag Manager is installed in the root layout via `@next/third-parties` for analytics/pixel management
 - [x] **INFRA-05**: Supabase is configured with an `inquiries` table as an audit log for form submissions
-- [ ] **INFRA-06**: Site passes Core Web Vitals (LCP < 2.5s, CLS < 0.1, INP < 200ms) on Vercel production
+- [x] **INFRA-06**: Site passes Core Web Vitals (LCP < 2.5s, CLS < 0.1, INP < 200ms) on Vercel production
 
 ### Homepage
 
@@ -128,7 +128,7 @@
 | INFRA-03 | Phase 1 | Complete |
 | INFRA-04 | Phase 1 | Complete |
 | INFRA-05 | Phase 1 | Complete |
-| INFRA-06 | Phase 3 | Pending |
+| INFRA-06 | Phase 3 | Complete |
 | HOME-01 | Phase 1 | Complete |
 | HOME-02 | Phase 1 | Complete |
 | HOME-03 | Phase 1 | Complete |
