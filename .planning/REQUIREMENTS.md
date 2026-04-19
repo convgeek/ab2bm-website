@@ -46,10 +46,10 @@
 
 ### Methodology Page
 
-- [ ] **METH-01**: Methodology page explains how Ab2bm's audience is built, engaged, and qualified (distinguishes from scraped databases)
-- [ ] **METH-02**: Methodology page explains content syndication mechanics — how a lead is qualified and delivered
-- [ ] **METH-03**: Methodology page explains webinar program mechanics — promotion, registration, attendance, lead delivery
-- [ ] **METH-04**: Programs are referred to with named/branded framework names (not just generic "content syndication")
+- [x] **METH-01**: Methodology page explains how Ab2bm's audience is built, engaged, and qualified (distinguishes from scraped databases)
+- [x] **METH-02**: Methodology page explains content syndication mechanics — how a lead is qualified and delivered
+- [x] **METH-03**: Methodology page explains webinar program mechanics — promotion, registration, attendance, lead delivery
+- [x] **METH-04**: Programs are referred to with named/branded framework names (not just generic "content syndication")
 
 ### Blog / Resources
 
@@ -147,10 +147,10 @@
 | ABUT-01 | Phase 1 | Complete |
 | ABUT-02 | Phase 1 | Complete |
 | ABUT-03 | Phase 1 | Complete |
-| METH-01 | Phase 3 | Pending |
-| METH-02 | Phase 3 | Pending |
-| METH-03 | Phase 3 | Pending |
-| METH-04 | Phase 3 | Pending |
+| METH-01 | Phase 3 | Complete |
+| METH-02 | Phase 3 | Complete |
+| METH-03 | Phase 3 | Complete |
+| METH-04 | Phase 3 | Complete |
 | BLOG-01 | Phase 2 | Complete |
 | BLOG-02 | Phase 2 | Complete |
 | BLOG-03 | Phase 2 | Complete |

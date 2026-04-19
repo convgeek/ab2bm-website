@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Phase 3 context gathered
-last_updated: "2026-04-19T16:55:17.249Z"
+stopped_at: Completed 03-01-PLAN.md (Wave 0 test scaffolding)
+last_updated: "2026-04-19T23:03:44.143Z"
 last_activity: 2026-04-17 — Plan 02-06 (content publishing checkpoint) reached; all code infrastructure deployed
 progress:
   total_phases: 3
   completed_phases: 2
-  total_plans: 11
-  completed_plans: 11
+  total_plans: 17
+  completed_plans: 12
   percent: 64
 ---
 
@@ -58,6 +58,7 @@ Progress: [███████░░░] 64%
 | Phase 02-content-and-proof-layer P03 | 1 | 2 tasks | 2 files |
 | Phase 02-content-and-proof-layer P04 | 1 | 2 tasks | 2 files |
 | Phase 02-content-and-proof-layer P05 | 2 | 2 tasks | 5 files |
+| Phase 03-differentiator-and-launch-ready P01 | 2 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -101,6 +102,8 @@ Recent decisions affecting current work:
 - [Phase 02-06]: TRST-02 is a legal requirement — no client logo may be published without confirmed written permission; permissions must be documented in STATE.md Decisions section when logos are added
 - [Phase 02-06]: Blog posts must target IT professionals (how-to guides, technical comparisons) — not demand gen messaging aimed at buyers (BLOG-03/BLOG-04 content requirement)
 - [Phase 02-06]: At least one case study must have featured: true to populate homepage CaseStudyHighlight component (CASE-01)
+- [Phase 03-01]: Methodology spec uses 4 test groups covering page render plus 3 section testids (METH-01/02/03) matching Phase 2 data-testid conventions
+- [Phase 03-01]: Old programs.spec.ts anchor-based tests replaced entirely — #content-syndication and #webinar IDs will not exist in refactored programs structure
 
 ### Pending Todos
 
@@ -117,6 +120,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-04-19T16:55:17.243Z
-Stopped at: Phase 3 context gathered
-Resume file: .planning/phases/03-differentiator-and-launch-ready/03-CONTEXT.md
+Last session: 2026-04-19T23:03:44.141Z
+Stopped at: Completed 03-01-PLAN.md (Wave 0 test scaffolding)
+Resume file: None
