@@ -57,18 +57,22 @@ Plans:
 - [ ] 02-06-PLAN.md — Content publishing checkpoint: 6+ blog posts, 3+ case studies, logos with permissions, testimonial, audience stats
 
 ### Phase 3: Differentiator and Launch-Ready
-**Goal**: The methodology page is built and makes Ab2bm's audience-building and lead delivery process concrete and credible; branded program names are applied site-wide; and the site passes Core Web Vitals on Vercel production — clearing every checklist item for launch
+**Goal**: The methodology page is built and makes Ab2bm's audience-building and lead delivery process concrete and credible; branded program names are applied site-wide across 6 individual program pages and the nav; and the site passes Core Web Vitals on Vercel production — clearing every checklist item for launch
 **Depends on**: Phase 2
 **Requirements**: METH-01, METH-02, METH-03, METH-04, INFRA-06
 **Success Criteria** (what must be TRUE):
   1. A visitor who asks "how do you source and validate leads?" can navigate to the Methodology page and read a plain-English explanation of how Ab2bm's audience is built and engaged, how content syndication leads are qualified and delivered, and how webinar leads are captured and delivered — all described with mechanics, not marketing language
   2. Programs across the site are referred to by branded/named framework names (not just generic "content syndication"), consistent from homepage to programs page to methodology page
   3. The site passes Core Web Vitals on Vercel production (LCP < 2.5s, CLS < 0.1, INP < 200ms) across all pages
-**Plans**: 5 plans
+**Plans**: 6 plans
 
 Plans:
-- [ ] 03-01: Methodology page — audience-building process, content syndication mechanics, webinar program mechanics, branded framework names
-- [ ] 03-02: Site-wide named program framework application + Core Web Vitals validation
+- [ ] 03-01-PLAN.md — Wave 0 test scaffolding: methodology.spec.ts (METH-01/02/03) + programs.spec.ts rewrite (METH-04 branded names, 6 programs, nav dropdown)
+- [ ] 03-02-PLAN.md — Data layer: expand program Sanity schema (6 programs + new fields) + methodologyPage singleton schema + GROQ queries + InquiryForm programType enum update
+- [ ] 03-03-PLAN.md — Individual program pages: /programs/[slug] dynamic route + ProgramHero, ProgramDetail, OptionalIngredients, ComplianceBlock, ProgramManagement section components
+- [ ] 03-04-PLAN.md — Methodology page: /methodology route + MethodologyPage 3-section component with Audience Building, ADVANCE ENGAGE process, Webinar process
+- [ ] 03-05-PLAN.md — Programs index refactor (overview grid) + nav dropdown (ProgramsDropdown) + SiteHeader/MobileMenu update with full nav structure
+- [ ] 03-06-PLAN.md — Speed Insights install + CWV audit + human Core Web Vitals checkpoint on Vercel production
 
 ## Progress
 
@@ -79,4 +83,4 @@ Phases execute in numeric order: 1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Foundation and Core Pages | 5/5 | Complete   | 2026-04-17 |
 | 2. Content and Proof Layer | 6/6 | Complete   | 2026-04-17 |
-| 3. Differentiator and Launch-Ready | 0/2 | Not started | - |
+| 3. Differentiator and Launch-Ready | 0/6 | Not started | - |
