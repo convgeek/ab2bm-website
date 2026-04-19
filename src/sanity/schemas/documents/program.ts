@@ -17,34 +17,35 @@ export const program = defineType({
       name: 'programType',
       type: 'string',
       title: 'Program Type',
+      // content-syndication removed in Phase 3 (pre-launch); replaced by advance-engage
       // IMPORTANT: These exact enum values are referenced by CONV-05 URL param pattern
       // and the server action in Plan 01-05. Do NOT change them.
       options: {
         list: [
-          { title: 'Content Syndication', value: 'content-syndication' },
-          { title: 'Webinar', value: 'webinar' },
+          { title: 'ADVANCE ENGAGE',  value: 'advance-engage' },
+          { title: 'ADVANCE ABM',     value: 'advance-abm' },
+          { title: 'ADVANCE INSTALL', value: 'advance-install' },
+          { title: 'ADVANCE BANT',    value: 'advance-bant' },
+          { title: 'ADVANCE EXPAND',  value: 'advance-expand' },
+          { title: 'Webinar',         value: 'webinar' },
         ],
       },
     }),
     defineField({ name: 'order', type: 'number', title: 'Order (for sorting)' }),
+    defineField({ name: 'solutionOverview', type: 'text', title: 'Solution Overview (1-2 paragraphs)' }),
     defineField({
-      name: 'mechanics',
+      name: 'howItWorks',
       type: 'array',
-      title: 'Mechanics (how the program works)',
+      title: 'How the Program Works (bullets)',
       of: [{ type: 'block' }],
     }),
     defineField({
-      name: 'deliverables',
+      name: 'whatYouGet',
       type: 'array',
-      title: 'Deliverables',
+      title: 'What You Get (bullets)',
       of: [{ type: 'block' }],
     }),
-    defineField({
-      name: 'targetingOptions',
-      type: 'array',
-      title: 'Targeting Options',
-      of: [{ type: 'block' }],
-    }),
+    defineField({ name: 'bestFor', type: 'text', title: 'Best For (paragraph)' }),
     defineField({ name: 'ctaLabel', type: 'string', title: 'CTA Label' }),
     defineField({ name: 'ctaHref', type: 'string', title: 'CTA URL' }),
   ],

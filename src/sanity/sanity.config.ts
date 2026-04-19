@@ -9,6 +9,7 @@ import { personaCard } from './schemas/objects/personaCard'
 import { audiencePage } from './schemas/documents/audiencePage'
 import { post } from './schemas/documents/post'
 import { caseStudy } from './schemas/documents/caseStudy'
+import { methodologyPage } from './schemas/documents/methodologyPage'
 
 export default defineConfig({
   name: 'default',
@@ -19,6 +20,6 @@ export default defineConfig({
   schema: {
     // CRITICAL: personaCard (object type) must appear before audiencePage (which references it)
     // to avoid Sanity Studio schema validation error "Unknown type: personaCard".
-    types: [homepage, program, teamMember, testimonial, siteSettings, personaCard, audiencePage, post, caseStudy],
+    types: [homepage, program, teamMember, testimonial, siteSettings, personaCard, audiencePage, post, caseStudy, methodologyPage],
   },
 })
