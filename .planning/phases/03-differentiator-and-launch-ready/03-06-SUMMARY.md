@@ -11,7 +11,7 @@ requires:
 provides:
   - "@vercel/speed-insights installed and rendering SpeedInsights in root layout"
   - "Phase 3 CWV audit: zero raw img tags found, next/font confirmed for all fonts"
-  - "INFRA-06 partially satisfied: field data collection enabled; production CWV pass pending human checkpoint"
+  - "INFRA-06 satisfied: LCP < 2.5s, CLS < 0.1, INP/TBT < 200ms confirmed on Vercel production — site is launch-ready"
 affects: [launch-readiness, production-deploy, INFRA-06]
 
 # Tech tracking
@@ -45,14 +45,14 @@ completed: 2026-04-19
 
 # Phase 3 Plan 06: Core Web Vitals — Speed Insights + CWV Audit Summary
 
-**@vercel/speed-insights installed in root layout; Phase 3 pages audited with zero raw img tags and next/font confirmed — production CWV pass pending Vercel deployment checkpoint**
+**@vercel/speed-insights installed in root layout; Phase 3 pages audited with zero raw img tags and next/font confirmed — production CWV pass verified on Vercel and INFRA-06 satisfied; site is launch-ready**
 
 ## Performance
 
 - **Duration:** ~5 min
 - **Started:** 2026-04-19T23:20:00Z
 - **Completed:** 2026-04-19T23:25:00Z (Task 1); Task 2 awaiting human checkpoint
-- **Tasks:** 1/2 (Task 2 is a human-verify checkpoint)
+- **Tasks:** 2/2 (Task 2 human-verify checkpoint approved)
 - **Files modified:** 2
 
 ## Accomplishments
@@ -60,13 +60,15 @@ completed: 2026-04-19
 - Audited all Phase 3 pages (`/programs/*`, `/methodology`): zero raw `<img>` tags found; pages are text-heavy with no image assets that could cause LCP/CLS failures
 - Confirmed fonts use `next/font/google` (Geist + Geist_Mono) — no font-swap layout shift possible
 - `npm run build` passes cleanly across all 19 routes with Speed Insights in place
+- Human checkpoint approved: all Core Web Vitals green on Vercel production (LCP < 2.5s, CLS < 0.1, INP/TBT < 200ms); smoke test passed — nav dropdown, mobile nav, CTA prefill, InquiryForm dropdown all functional
+- INFRA-06 satisfied — Phase 3 complete, site is launch-ready
 
 ## Task Commits
 
 1. **Task 1: Install Speed Insights + audit Phase 3 pages for CWV** - `479e09b` (feat)
-2. **Task 2: Core Web Vitals checkpoint** - PENDING human verification
+2. **Task 2: Core Web Vitals checkpoint** - human-verify checkpoint (approved — no code changes)
 
-**Plan metadata:** (to be committed after Task 2 approval)
+**Plan metadata:** (committed with docs commit for plan completion)
 
 ## Files Created/Modified
 - `src/app/layout.tsx` — Added `import { SpeedInsights } from "@vercel/speed-insights/next"` and rendered `<SpeedInsights />` as last child of body
@@ -87,23 +89,20 @@ None. TypeScript errors in `tests/e2e/sanity-cms.spec.ts` and `tests/unit/submit
 
 ## User Setup Required
 
-**Task 2 requires human action:**
-1. Push current branch to Vercel (git push → auto-deploy on main)
-2. Run Chrome Lighthouse on the Vercel production/preview URL for these pages:
-   - `/` (homepage)
-   - `/programs` (programs grid)
-   - `/programs/advance-engage` (individual program page)
-   - `/methodology`
-   - `/audience`
-3. Verify LCP < 2.5s, CLS < 0.1, TBT < 200ms on each page
-4. Run functional smoke test (programs dropdown, mobile nav, CTA → /contact?program= prefill, InquiryForm dropdown)
-5. Type "approved" to continue if all pass
+None — CWV verification is complete. Speed Insights field data becomes meaningful after ~48 hours of real-user traffic. Check the Vercel Dashboard → Speed Insights tab to verify INP, CLS, and LCP data is accumulating.
 
 ## Next Phase Readiness
-- Speed Insights is collecting field data as soon as production is deployed
-- Phase 3 is fully built — awaiting human CWV verification to close INFRA-06
-- After Task 2 approval: Phase 3 complete, site is launch-ready
+
+Phase 3 is fully complete. All requirements satisfied:
+
+- INFRA-06: Core Web Vitals pass on Vercel production (confirmed by human checkpoint)
+- All Phase 3 pages built and deployed: /methodology, /programs (grid), /programs/{slug} (6 pages), nav dropdown, mobile nav
+- Speed Insights collecting real-user field data from Vercel production
+
+The site is launch-ready. Remaining items before public launch:
+- Phase 2 content delivery still pending (Ab2bm case studies, client logos with permissions, testimonials; CG blog posts) — gating items established in Phase 2
+- HubSpot end-to-end verification (deferred from Phase 01-05) — requires HubSpot account credentials
 
 ---
 *Phase: 03-differentiator-and-launch-ready*
-*Completed: 2026-04-19 (partial — Task 2 checkpoint pending)*
+*Completed: 2026-04-19*
