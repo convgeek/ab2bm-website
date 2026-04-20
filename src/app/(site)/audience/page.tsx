@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { sanityFetch } from '@/sanity/lib/live'
 import { AUDIENCE_PAGE_QUERY } from '@/sanity/lib/queries'
 import { PersonaCard } from '@/components/sections/PersonaCard'
+import { PageHeader } from '@/components/layout/PageHeader'
 
 export const metadata: Metadata = {
   title: 'Our Audience | Advance B2B Media',
@@ -86,30 +87,33 @@ export default async function AudiencePage() {
 
   return (
     <main>
-      {/* Section 1 — Hero / Intro */}
-      <div className="bg-background py-16 md:py-24 border-b border-border">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            {page?.pageHeadline ?? 'Our Audience'}
-          </h1>
-          <p className="mt-6 text-xl text-muted-foreground leading-relaxed max-w-3xl">
-            {page?.pageSubheadline ??
-              'The IT professionals and channel partners Ab2bm reaches'}
-          </p>
-        </div>
-      </div>
+      <PageHeader
+        eyebrow="Audience"
+        headline={page?.pageHeadline ?? 'Our Audience'}
+        subheadline={
+          page?.pageSubheadline ??
+          'The IT professionals and channel partners Ab2bm reaches — opt-in, verified, and actively engaged.'
+        }
+      />
 
-      {/* Section 2 — Persona Cards (AUDN-01, AUDN-02) */}
-      <section className="py-16 border-b border-border">
+      {/* Audience Segments */}
+      <section className="py-16 md:py-24 bg-background border-b border-border">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-foreground mb-4">Audience Segments</h2>
-          <p className="text-muted-foreground mb-10 max-w-2xl">
-            Ab2bm reaches four distinct segments: IT Practitioners, IT Decision-Makers and
-            Executives, Managed Service Providers (MSPs), and Managed Security Service Providers
-            (MSSPs). Each represents a separate buying role.
-          </p>
+          <div className="mb-10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
+              Segments
+            </p>
+            <h2 className="text-2xl font-bold text-foreground sm:text-3xl mb-3">
+              Audience Segments
+            </h2>
+            <p className="text-muted-foreground max-w-2xl">
+              Ab2bm reaches four distinct segments: IT Practitioners, IT Decision-Makers and
+              Executives, Managed Service Providers (MSPs), and Managed Security Service Providers
+              (MSSPs). Each represents a separate buying role.
+            </p>
+          </div>
           {personas.length > 0 ? (
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
               {personas.map((persona, index) => (
                 <PersonaCard
                   key={index}
@@ -126,20 +130,29 @@ export default async function AudiencePage() {
         </div>
       </section>
 
-      {/* Section 3 — Audience Stats + Methodology Note (AUDN-03) */}
-      <section className="py-16 border-b border-border">
+      {/* Audience Stats */}
+      <section className="py-16 md:py-20 bg-secondary/30 border-b border-border">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-foreground mb-8">Audience by the Numbers</h2>
+          <div className="mb-10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
+              By the Numbers
+            </p>
+            <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
+              Audience by the Numbers
+            </h2>
+          </div>
           <div data-testid="audience-stats">
             {stats.length > 0 ? (
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-8">
+              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 mb-8">
                 {stats.map((stat, index) => (
                   <div
                     key={index}
-                    className="rounded-xl border border-border bg-card p-6 flex flex-col gap-1"
+                    className="rounded-2xl border border-border bg-background p-6 flex flex-col gap-1 shadow-sm"
                   >
-                    <span className="text-3xl font-bold text-foreground">{stat.value}</span>
-                    <span className="text-sm font-medium text-muted-foreground">{stat.label}</span>
+                    <span className="text-4xl font-bold text-foreground tabular-nums">
+                      {stat.value}
+                    </span>
+                    <span className="text-sm font-semibold text-primary mt-1">{stat.label}</span>
                     {stat.footnote && (
                       <span className="text-xs text-muted-foreground mt-1">{stat.footnote}</span>
                     )}
@@ -150,42 +163,34 @@ export default async function AudiencePage() {
               <p className="text-muted-foreground italic mb-8">Verified audience data coming soon.</p>
             )}
           </div>
-          {methodologyNote && (
-            <div
-              data-testid="methodology-note"
-              className="rounded-lg border border-border bg-muted/50 p-4 text-sm text-muted-foreground"
-            >
-              <span className="font-medium text-foreground">Methodology: </span>
-              {methodologyNote}
-            </div>
-          )}
-          {!methodologyNote && (
-            <div
-              data-testid="methodology-note"
-              className="rounded-lg border border-border bg-muted/50 p-4 text-sm text-muted-foreground"
-            >
-              <span className="font-medium text-foreground">Methodology: </span>
-              Audience data sourced from first-party subscription records and verified engagement
-              metrics. Full methodology note coming soon.
-            </div>
-          )}
+          <div
+            data-testid="methodology-note"
+            className="rounded-xl border border-border bg-background p-5 text-sm text-muted-foreground"
+          >
+            <span className="font-semibold text-foreground">Methodology: </span>
+            {methodologyNote ??
+              'Audience data sourced from first-party subscription records and verified engagement metrics. Full methodology note coming soon.'}
+          </div>
         </div>
       </section>
 
-      {/* Section 4 — Industry Breakdown + Company Size Distribution (AUDN-04) */}
-      <section className="py-16">
+      {/* Industry & Company Size */}
+      <section className="py-16 md:py-24 bg-background">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-            {/* Industry / Vertical Breakdown */}
+            {/* Industry Breakdown */}
             <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
+                Verticals
+              </p>
               <h2 className="text-2xl font-bold text-foreground mb-6">Industry Breakdown</h2>
               <div data-testid="industry-breakdown">
                 {industryBreakdown.length > 0 ? (
                   <ul className="space-y-3">
                     {industryBreakdown.map((item, index) => (
-                      <li key={index} className="flex items-center justify-between">
+                      <li key={index} className="flex items-center justify-between py-2 border-b border-border last:border-b-0">
                         <span className="text-sm text-foreground">{item.vertical}</span>
-                        <span className="text-sm font-medium text-foreground">{item.percentage}</span>
+                        <span className="text-sm font-semibold text-accent">{item.percentage}</span>
                       </li>
                     ))}
                   </ul>
@@ -195,16 +200,19 @@ export default async function AudiencePage() {
               </div>
             </div>
 
-            {/* Company Size Distribution */}
+            {/* Company Size */}
             <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
+                Company Size
+              </p>
               <h2 className="text-2xl font-bold text-foreground mb-6">Company Size Distribution</h2>
               <div data-testid="company-size-distribution">
                 {companySizeDistribution.length > 0 ? (
                   <ul className="space-y-3">
                     {companySizeDistribution.map((item, index) => (
-                      <li key={index} className="flex items-center justify-between">
+                      <li key={index} className="flex items-center justify-between py-2 border-b border-border last:border-b-0">
                         <span className="text-sm text-foreground">{item.tier}</span>
-                        <span className="text-sm font-medium text-foreground">{item.percentage}</span>
+                        <span className="text-sm font-semibold text-accent">{item.percentage}</span>
                       </li>
                     ))}
                   </ul>

@@ -30,21 +30,41 @@ const PLACEHOLDER_MEMBERS: TeamMember[] = [
   },
 ]
 
+function AvatarPlaceholder({ name }: { name: string }) {
+  const initials = name
+    .split(' ')
+    .map((n) => n[0])
+    .join('')
+    .slice(0, 2)
+    .toUpperCase()
+  return (
+    <div className="w-full aspect-square bg-primary/10 flex items-center justify-center">
+      <span className="text-5xl font-bold text-primary/40 select-none">{initials}</span>
+    </div>
+  )
+}
+
 export function TeamGrid({ members }: TeamGridProps) {
   const displayMembers = members.length > 0 ? members : PLACEHOLDER_MEMBERS
 
   return (
-    <section className="bg-muted/30 py-16 md:py-24 border-b border-border">
+    <section className="bg-secondary/30 py-20 md:py-28 border-b border-border">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-12">
-          Our Team
-        </h2>
+        <div className="mb-12">
+          <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
+            The Team
+          </p>
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Our Team
+          </h2>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayMembers.map((member) => (
             <div
               key={member._id}
               data-testid="team-card"
-              className="bg-background rounded-xl overflow-hidden shadow-sm border border-border"
+              className="rounded-2xl border border-border bg-background overflow-hidden shadow-sm transition-all hover:shadow-md"
             >
               {member.photo?.url ? (
                 <div className="relative w-full aspect-square">
@@ -57,13 +77,15 @@ export function TeamGrid({ members }: TeamGridProps) {
                   />
                 </div>
               ) : (
-                <div className="w-full aspect-square bg-gray-200 rounded-lg" />
+                <AvatarPlaceholder name={member.name} />
               )}
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-foreground">{member.name}</h3>
-                <p className="mt-1 text-sm font-medium text-primary">{member.role}</p>
+              <div className="p-6 border-t border-border">
+                <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
+                <p className="mt-1 text-sm font-semibold text-accent">{member.role}</p>
                 {member.bio && (
-                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{member.bio}</p>
+                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                    {member.bio}
+                  </p>
                 )}
               </div>
             </div>

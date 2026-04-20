@@ -56,7 +56,10 @@
   /* Ab2bm brand palette */
   --brand-purple:       oklch(0.24 0.18 303);   /* deep purple – logo background */
   --brand-purple-dark:  oklch(0.20 0.14 298);   /* text purple – ADVANCE / B B letters */
+  --brand-purple-mid:   oklch(0.42 0.14 300);   /* mid purple – accents, dividers */
+  --brand-purple-light: oklch(0.95 0.03 292);   /* light lavender – section backgrounds */
   --brand-orange:       oklch(0.63 0.16 50);    /* orange – the "2" accent */
+  --brand-orange-light: oklch(0.96 0.04 55);    /* light orange tint – card accents */
   --brand-silver:       oklch(0.76 0.015 225);  /* silver – concentric rings */
 
   --background: oklch(1 0 0);

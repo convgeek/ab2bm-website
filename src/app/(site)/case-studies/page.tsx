@@ -2,6 +2,7 @@
 import { sanityFetch } from '@/sanity/lib/live'
 import { CASE_STUDIES_QUERY } from '@/sanity/lib/queries'
 import { CaseStudyCard } from '@/components/sections/CaseStudyCard'
+import { PageHeader } from '@/components/layout/PageHeader'
 
 type CaseStudy = {
   _id: string
@@ -40,25 +41,29 @@ export default async function CaseStudiesPage() {
 
   return (
     <main>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div className="mb-12">
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            Case Studies
-          </h1>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl">
-            Real results for tech vendors reaching MSP and MSSP audiences.
-          </p>
-        </div>
+      <PageHeader
+        eyebrow="Proof Points"
+        headline="Case Studies"
+        subheadline="Real results for technology vendors reaching MSP and MSSP audiences."
+      />
 
-        {caseStudies.length === 0 ? (
-          <p className="text-muted-foreground">Case studies coming soon.</p>
-        ) : (
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {caseStudies.map((cs) => (
-              <CaseStudyCard key={cs._id} {...cs} />
-            ))}
-          </div>
-        )}
+      <div className="bg-background py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          {caseStudies.length === 0 ? (
+            <div className="rounded-2xl border border-border bg-secondary/30 p-16 text-center">
+              <p className="text-lg font-semibold text-foreground">Case studies coming soon.</p>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Client success stories are in preparation and will be published shortly.
+              </p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {caseStudies.map((cs) => (
+                <CaseStudyCard key={cs._id} {...cs} />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </main>
   )

@@ -4,39 +4,46 @@ interface ProgramHeroProps {
   programType: string
 }
 
-// Map programType to a brand accent color class
-const PROGRAM_ACCENT: Record<string, string> = {
-  'advance-engage':  'border-brand-purple',
-  'advance-abm':     'border-brand-orange',
-  'advance-install': 'border-brand-purple',
-  'advance-bant':    'border-brand-orange',
-  'advance-expand':  'border-brand-purple',
-  webinar:           'border-brand-silver',
-}
-
-function getAccentClass(programType: string): string {
-  return PROGRAM_ACCENT[programType] ?? 'border-primary'
+// Program type → badge label
+const PROGRAM_TYPE_LABEL: Record<string, string> = {
+  'advance-engage':  'Lead Generation',
+  'advance-abm':     'Account-Based Marketing',
+  'advance-install': 'Install Base Targeting',
+  'advance-bant':    'Sales-Ready Leads',
+  'advance-expand':  'Customer Expansion',
+  webinar:           'Virtual Events',
 }
 
 export function ProgramHero({ name, tagline, programType }: ProgramHeroProps) {
-  const accentClass = getAccentClass(programType)
+  const typeLabel = PROGRAM_TYPE_LABEL[programType] ?? 'Demand Program'
 
   return (
     <section
       data-testid="program-hero"
-      className="relative bg-background py-20 md:py-28 border-b border-border"
+      className="relative overflow-hidden bg-primary py-20 md:py-28"
     >
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className={`inline-block border-l-4 ${accentClass} pl-6`}>
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            {name}
-          </h1>
-          {tagline && (
-            <p className="mt-4 text-xl text-muted-foreground leading-relaxed max-w-3xl">
-              {tagline}
-            </p>
-          )}
-        </div>
+      {/* Decorative radial glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(ellipse 80% 60% at 80% 0%, oklch(0.35 0.20 303 / 0.5), transparent 60%)',
+        }}
+      />
+      <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        {/* Program type badge */}
+        <span className="inline-flex items-center rounded-full border border-accent/40 bg-accent/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent mb-6">
+          {typeLabel}
+        </span>
+        <h1 className="text-4xl font-extrabold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl">
+          {name}
+        </h1>
+        {tagline && (
+          <p className="mt-5 text-xl text-primary-foreground/80 leading-relaxed max-w-2xl">
+            {tagline}
+          </p>
+        )}
       </div>
     </section>
   )

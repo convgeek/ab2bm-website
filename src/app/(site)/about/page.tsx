@@ -2,6 +2,7 @@
 import type { Metadata } from 'next'
 import { sanityFetch } from '@/sanity/lib/live'
 import { TEAM_MEMBERS_QUERY } from '@/sanity/lib/queries'
+import { PageHeader } from '@/components/layout/PageHeader'
 import { CompanyStory } from '@/components/sections/CompanyStory'
 import { TeamGrid } from '@/components/sections/TeamGrid'
 import { CgPartnership } from '@/components/sections/CgPartnership'
@@ -48,18 +49,11 @@ export default async function AboutPage() {
 
   return (
     <main>
-      <div className="bg-background py-16 md:py-24 border-b border-border">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            About Advance B2B Media
-          </h1>
-          <p className="mt-6 text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            We connect technology vendors with the IT professionals who make real purchasing
-            decisions — MSPs, MSSPs, and IT practitioners others miss.
-          </p>
-        </div>
-      </div>
-
+      <PageHeader
+        eyebrow="About Us"
+        headline="About Advance B2B Media"
+        subheadline="We connect technology vendors with the IT professionals who make real purchasing decisions — MSPs, MSSPs, and IT practitioners others miss."
+      />
       <CompanyStory />
       <TeamGrid members={teamMembers} />
       <CgPartnership />

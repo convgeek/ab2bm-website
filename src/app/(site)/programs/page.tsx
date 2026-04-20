@@ -2,6 +2,7 @@
 import type { Metadata } from 'next'
 import { sanityFetch } from '@/sanity/lib/live'
 import { PROGRAMS_INDEX_QUERY } from '@/sanity/lib/queries'
+import { PageHeader } from '@/components/layout/PageHeader'
 
 export const metadata: Metadata = {
   title: 'Demand Programs | Advance B2B Media',
@@ -46,38 +47,37 @@ export default async function ProgramsPage() {
 
   return (
     <main>
-      <div className="bg-background py-16 md:py-24 border-b border-border">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            Demand Programs
-          </h1>
-          <p className="mt-6 text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            Six demand generation programs built for technology vendors targeting IT decision-makers, MSPs, and MSSPs — from top-of-funnel content syndication to sales-ready BANT leads.
-          </p>
-        </div>
-      </div>
+      <PageHeader
+        eyebrow="Demand Generation"
+        headline="Demand Programs"
+        subheadline="Six programs built for technology vendors targeting IT decision-makers, MSPs, and MSSPs — from top-of-funnel content syndication to sales-ready BANT leads."
+      />
 
-      <div className="py-16 md:py-24">
+      <div className="py-16 md:py-24 bg-background">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div
             data-testid="programs-grid"
-            className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+            className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
           >
             {programs.map((program) => (
               <a
                 key={program._id}
                 href={`/programs/${program.slug}`}
-                className="group flex flex-col rounded-xl border border-border bg-background p-6 shadow-sm transition-shadow hover:shadow-md"
+                className="group relative flex flex-col rounded-2xl border border-border bg-background overflow-hidden shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5"
               >
-                <h2 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-                  {program.name}
-                </h2>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed flex-1">
-                  {program.tagline}
-                </p>
-                <span className="mt-4 text-sm font-medium text-primary">
-                  Learn more →
-                </span>
+                {/* Orange top accent */}
+                <div className="h-1 w-full bg-accent" />
+                <div className="flex flex-col flex-1 p-6">
+                  <h2 className="text-base font-bold tracking-wide text-foreground group-hover:text-primary transition-colors">
+                    {program.name}
+                  </h2>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed flex-1">
+                    {program.tagline}
+                  </p>
+                  <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                    Learn more <span className="text-accent">→</span>
+                  </span>
+                </div>
               </a>
             ))}
           </div>

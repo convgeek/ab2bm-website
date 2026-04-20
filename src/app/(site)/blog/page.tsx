@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { sanityFetch } from '@/sanity/lib/live'
 import { BLOG_LISTING_QUERY } from '@/sanity/lib/queries'
+import { PageHeader } from '@/components/layout/PageHeader'
 
 type BlogPost = {
   _id: string
@@ -43,53 +44,68 @@ export default async function BlogPage() {
   }
 
   return (
-    <main className="mx-auto max-w-7xl px-4 sm:px-6 py-16">
-      <div className="mb-12">
-        <h1 className="text-4xl font-bold tracking-tight">Resources</h1>
-        <p className="mt-4 text-lg text-muted-foreground">
-          Insights and strategies for B2B technology marketers.
-        </p>
+    <main>
+      <PageHeader
+        eyebrow="Resources"
+        headline="Latest Insights"
+        subheadline="Strategies, benchmarks, and perspectives for B2B technology marketers reaching IT buyers."
+      />
+
+      <div className="bg-background py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          {posts.length === 0 ? (
+            <div className="rounded-2xl border border-border bg-secondary/30 p-16 text-center">
+              <p className="text-lg font-semibold text-foreground">Content coming soon.</p>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Check back shortly — new articles are on the way.
+              </p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {posts.map((post) => (
+                <article
+                  key={post._id}
+                  data-testid="blog-card"
+                  className="group rounded-2xl border border-border bg-card overflow-hidden shadow-sm flex flex-col transition-all hover:shadow-md hover:-translate-y-0.5"
+                >
+                  <div className="h-1 w-full bg-accent" />
+                  <div className="flex flex-col flex-1 p-6">
+                    {post.publishedAt && (
+                      <time
+                        dateTime={post.publishedAt}
+                        className="text-xs font-medium text-accent uppercase tracking-wide"
+                      >
+                        {formatDate(post.publishedAt)}
+                      </time>
+                    )}
+                    <h2 className="mt-3 text-lg font-bold leading-snug text-foreground group-hover:text-primary transition-colors flex-1">
+                      <Link href={`/blog/${post.slug}`} className="hover:underline">
+                        {post.title}
+                      </Link>
+                    </h2>
+                    {post.excerpt && (
+                      <p className="mt-3 text-sm text-muted-foreground line-clamp-3 leading-relaxed">
+                        {post.excerpt}
+                      </p>
+                    )}
+                    <div className="mt-5 flex items-center justify-between">
+                      <Link
+                        href={`/blog/${post.slug}`}
+                        className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
+                      >
+                        Read more <span className="text-accent">→</span>
+                      </Link>
+                      {post.author && (
+                        <span className="text-xs text-muted-foreground">{post.author}</span>
+                      )}
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
-
-      {posts.length === 0 ? (
-        <div className="rounded-xl border border-border bg-card p-12 text-center">
-          <p className="text-lg text-muted-foreground">Content coming soon.</p>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Check back shortly — new articles are on the way.
-          </p>
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post) => (
-            <article
-              key={post._id}
-              data-testid="blog-card"
-              className="rounded-xl border border-border bg-card p-6 flex flex-col"
-            >
-              <div className="flex-1">
-                <Link href={`/blog/${post.slug}`}>
-                  <h2 className="text-xl font-semibold leading-snug hover:text-primary transition-colors">
-                    {post.title}
-                  </h2>
-                </Link>
-
-                {post.excerpt && (
-                  <p className="mt-3 text-sm text-muted-foreground line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                )}
-              </div>
-
-              <footer className="mt-4 pt-4 border-t border-border flex items-center justify-between text-xs text-muted-foreground">
-                {post.publishedAt && (
-                  <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
-                )}
-                {post.author && <span>{post.author}</span>}
-              </footer>
-            </article>
-          ))}
-        </div>
-      )}
     </main>
   )
 }
