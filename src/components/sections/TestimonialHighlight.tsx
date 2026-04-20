@@ -9,46 +9,60 @@ interface TestimonialHighlightProps {
   testimonial: TestimonialProps | null
 }
 
+function GuaranteeFallback() {
+  return (
+    <section className="bg-secondary/40 py-20 md:py-24">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div className="rounded-2xl border border-border bg-background px-8 py-12 shadow-sm sm:px-12 text-center">
+          <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-6">
+            Our Guarantee
+          </p>
+          <p className="text-xl font-medium leading-8 text-foreground sm:text-2xl">
+            Every program is delivered on time, on budget, and to the quality standard agreed —
+            or we make it right.
+          </p>
+          <div className="mt-8 h-px w-12 bg-accent mx-auto" />
+          <p className="mt-4 text-sm text-muted-foreground">
+            Advance B2B Media — 100% Quality Commitment since 2013
+          </p>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 export function TestimonialHighlight({ testimonial }: TestimonialHighlightProps) {
   if (!testimonial) {
-    // Graceful fallback — never crash or show empty section
-    return (
-      <section className="bg-muted/50 py-16 md:py-20">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-          <blockquote>
-            <p className="text-lg italic text-muted-foreground">
-              Client testimonials coming soon.
-            </p>
-          </blockquote>
-        </div>
-      </section>
-    )
+    return <GuaranteeFallback />
   }
 
   return (
-    <section className="bg-muted/50 py-16 md:py-20">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-        <blockquote className="relative">
-          <svg
-            className="mx-auto mb-6 h-8 w-8 text-primary/40"
-            fill="currentColor"
-            viewBox="0 0 32 32"
+    <section className="bg-secondary/40 py-20 md:py-24">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div className="relative rounded-2xl border border-border bg-background px-8 py-12 shadow-sm sm:px-12">
+          {/* Large decorative quote mark */}
+          <div
             aria-hidden="true"
+            className="absolute -top-5 left-10 flex h-10 w-10 items-center justify-center rounded-full bg-accent text-accent-foreground text-2xl font-black leading-none shadow"
           >
-            <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-          </svg>
-          <p className="text-xl font-medium leading-8 text-foreground sm:text-2xl">
-            &ldquo;{testimonial.quote}&rdquo;
-          </p>
-          <footer className="mt-8">
-            <p className="text-base font-semibold text-foreground">
-              {testimonial.attribution}
+            &ldquo;
+          </div>
+
+          <blockquote className="text-center">
+            <p className="text-xl font-medium leading-8 text-foreground sm:text-2xl">
+              &ldquo;{testimonial.quote}&rdquo;
             </p>
-            <p className="mt-1 text-sm text-muted-foreground">
-              {testimonial.role}, {testimonial.company}
-            </p>
-          </footer>
-        </blockquote>
+            <footer className="mt-8 flex flex-col items-center gap-1">
+              <div className="h-px w-12 bg-accent mb-4" />
+              <p className="text-base font-semibold text-foreground">
+                {testimonial.attribution}
+              </p>
+              <p className="text-sm text-muted-foreground">
+                {testimonial.role}, {testimonial.company}
+              </p>
+            </footer>
+          </blockquote>
+        </div>
       </div>
     </section>
   )

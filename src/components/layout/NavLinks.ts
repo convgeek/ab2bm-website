@@ -8,7 +8,6 @@ export const programLinks = [
 ]
 
 export const mainNavLinks = [
-  { href: '/', label: 'Home' },
   // Programs handled separately as dropdown — not in this flat list
   { href: '/methodology', label: 'Methodology' },
   { href: '/audience', label: 'Audience' },

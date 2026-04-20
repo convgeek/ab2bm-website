@@ -29,10 +29,6 @@ export function MobileMenu() {
       {open && (
         <div className="absolute left-0 right-0 top-full z-50 border-b border-border bg-background shadow-lg">
           <nav className="flex flex-col px-4 py-4 gap-1" aria-label="Mobile navigation">
-            <Link href="/" onClick={() => setOpen(false)} className="rounded-md px-3 py-2 text-base font-medium text-foreground hover:bg-muted">
-              Home
-            </Link>
-
             {/* Programs expanded list — no hover dropdown on mobile (RESEARCH.md Pitfall 6) */}
             <div className="px-3 py-2">
               <Link href="/programs" onClick={() => setOpen(false)} className="text-sm font-semibold uppercase tracking-wider text-muted-foreground hover:text-foreground">
