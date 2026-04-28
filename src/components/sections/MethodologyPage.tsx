@@ -1,13 +1,8 @@
-import { PortableText } from '@portabletext/react'
-import type { PortableTextBlock } from '@portabletext/react'
 import { PageHeader } from '@/components/layout/PageHeader'
 
 interface MethodologyPageProps {
   pageHeadline: string
   pageSubheadline: string | null
-  audienceBuilding: PortableTextBlock[] | null
-  contentSyndicationProcess: PortableTextBlock[] | null
-  webinarProcess: PortableTextBlock[] | null
 }
 
 interface MethodologySectionProps {
@@ -37,13 +32,7 @@ function MethodologySection({ number, title, children, alt, testId }: Methodolog
   )
 }
 
-export function MethodologyPage({
-  pageHeadline,
-  pageSubheadline,
-  audienceBuilding,
-  contentSyndicationProcess,
-  webinarProcess,
-}: MethodologyPageProps) {
+export function MethodologyPage({ pageHeadline, pageSubheadline }: MethodologyPageProps) {
   return (
     <div>
       <PageHeader
@@ -57,11 +46,6 @@ export function MethodologyPage({
         title="Audience Building"
         testId="methodology-audience-building"
       >
-        {audienceBuilding ? (
-          <div className="prose prose-neutral max-w-none">
-            <PortableText value={audienceBuilding} />
-          </div>
-        ) : (
           <div className="space-y-4 text-muted-foreground">
             <p>
               Ab2bm&apos;s audience is built — not bought. The foundation is a decade of opt-in
@@ -90,7 +74,6 @@ export function MethodologyPage({
               outreach. Opt-in records are captured and retained for verification and audit purposes.
             </p>
           </div>
-        )}
       </MethodologySection>
 
       <MethodologySection
@@ -99,11 +82,6 @@ export function MethodologyPage({
         testId="methodology-content-syndication"
         alt
       >
-        {contentSyndicationProcess ? (
-          <div className="prose prose-neutral max-w-none">
-            <PortableText value={contentSyndicationProcess} />
-          </div>
-        ) : (
           <div className="space-y-4 text-muted-foreground">
             <p>
               ADVANCE ENGAGE works by putting high-value, educational content to work engaging B2B
@@ -130,7 +108,6 @@ export function MethodologyPage({
               ))}
             </ol>
           </div>
-        )}
       </MethodologySection>
 
       <MethodologySection
@@ -138,11 +115,6 @@ export function MethodologyPage({
         title="Webinar Program Process"
         testId="methodology-webinar"
       >
-        {webinarProcess ? (
-          <div className="prose prose-neutral max-w-none">
-            <PortableText value={webinarProcess} />
-          </div>
-        ) : (
           <div className="space-y-4 text-muted-foreground">
             <p>
               Ab2bm&apos;s webinar program connects your subject matter experts directly with senior
@@ -167,7 +139,6 @@ export function MethodologyPage({
               ))}
             </ol>
           </div>
-        )}
       </MethodologySection>
     </div>
   )

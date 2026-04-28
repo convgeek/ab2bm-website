@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { stegaClean } from '@sanity/client/stega'
 
 interface HeroProps {
   headline: string
@@ -16,7 +15,7 @@ const PLACEHOLDER_CTA_LABEL = 'Start a Conversation'
 const PLACEHOLDER_CTA_HREF = '/contact'
 
 export function Hero({ headline, subheadline, ctaLabel, ctaHref }: HeroProps) {
-  const cleanHref = stegaClean(ctaHref) || PLACEHOLDER_CTA_HREF
+  const cleanHref = ctaHref || PLACEHOLDER_CTA_HREF
 
   return (
     <section className="relative overflow-hidden bg-primary py-24 md:py-32 lg:py-40">

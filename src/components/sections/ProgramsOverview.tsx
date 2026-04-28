@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { stegaClean } from '@sanity/client/stega'
 
 interface Program {
   _id: string
@@ -53,7 +52,7 @@ export function ProgramsOverview({ programs }: ProgramsOverviewProps) {
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {displayPrograms.map((program) => {
-            const slugCurrent = stegaClean(program.slug?.current) ?? program._id
+            const slugCurrent = program.slug?.current ?? program._id
             return (
               <div
                 key={program._id}
