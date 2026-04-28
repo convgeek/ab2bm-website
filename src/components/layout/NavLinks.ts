@@ -4,7 +4,7 @@ export const programLinks = [
   { label: 'ADVANCE INSTALL', href: '/programs/advance-install' },
   { label: 'ADVANCE BANT',    href: '/programs/advance-bant' },
   { label: 'ADVANCE EXPAND',  href: '/programs/advance-expand' },
-  { label: 'Webinar',         href: '/programs/webinar' },
+  { label: 'Custom Content',  href: '/programs/webinar' },
 ]
 
 export const mainNavLinks = [
