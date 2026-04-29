@@ -1,0 +1,101 @@
+<svg viewBox="0 0 560 400" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <filter id="aa1" x="-4%" y="-4%" width="108%" height="112%"><feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#0a0e1a" flood-opacity="0.06"/></filter>
+    <filter id="aa2" x="-4%" y="-6%" width="108%" height="116%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#0a0e1a" flood-opacity="0.06"/></filter>
+  </defs>
+  <rect x="10" y="10" width="540" height="380" rx="16" fill="#f5f6f8" filter="url(#aa1)"/>
+  <text x="40" y="46" font-size="13" font-weight="700" fill="#0a0e1a" letter-spacing="0.5">ACCOUNT-BASED TARGETING</text>
+  <line x1="40" y1="56" x2="520" y2="56" stroke="#e2e4e8" stroke-width="1"/>
+
+  <!-- Concentric rings -->
+  <!-- Outer ring: Target Account List -->
+  <circle cx="230" cy="220" r="140" fill="none" stroke="#3b5bdb" stroke-width="1.2" opacity="0.1"/>
+  <circle cx="230" cy="220" r="140" fill="#3b5bdb" opacity="0.02"/>
+  <text x="230" y="88" font-size="8" fill="#6b7280" text-anchor="middle" font-weight="600" letter-spacing="0.5">TARGET ACCOUNT LIST</text>
+
+  <!-- Account name placeholders on outer ring -->
+  <rect x="100" y="96" width="70" height="18" rx="4" fill="#fff" filter="url(#aa2)"/>
+  <text x="135" y="109" font-size="7.5" fill="#0a0e1a" text-anchor="middle">Acme Corp</text>
+  <rect x="185" y="96" width="70" height="18" rx="4" fill="#fff" filter="url(#aa2)"/>
+  <text x="220" y="109" font-size="7.5" fill="#0a0e1a" text-anchor="middle">TechCo</text>
+  <rect x="270" y="96" width="78" height="18" rx="4" fill="#fff" filter="url(#aa2)"/>
+  <text x="309" y="109" font-size="7.5" fill="#0a0e1a" text-anchor="middle">DataSystems</text>
+
+  <!-- Middle ring: Look-a-Like + Intent Expansion -->
+  <circle cx="230" cy="220" r="95" fill="none" stroke="#3b5bdb" stroke-width="1" opacity="0.12" stroke-dasharray="6,4"/>
+  <circle cx="230" cy="220" r="95" fill="#3b5bdb" opacity="0.02"/>
+  <text x="135" y="142" font-size="7.5" fill="#3b5bdb" font-weight="600">LOOK-A-LIKE + INTENT</text>
+
+  <!-- Expanded accounts on middle ring -->
+  <rect x="96" y="152" width="62" height="16" rx="4" fill="#3b5bdb" opacity="0.06" stroke="#3b5bdb" stroke-width="0.6" stroke-dasharray="3,2"/>
+  <text x="127" y="163" font-size="7" fill="#3b5bdb" text-anchor="middle">+ NetOps Inc</text>
+  <rect x="280" y="138" width="68" height="16" rx="4" fill="#3b5bdb" opacity="0.06" stroke="#3b5bdb" stroke-width="0.6" stroke-dasharray="3,2"/>
+  <text x="314" y="149" font-size="7" fill="#3b5bdb" text-anchor="middle">+ CloudFirst</text>
+
+  <!-- Inner ring: Buying Committee Engaged -->
+  <circle cx="230" cy="220" r="50" fill="none" stroke="#3b5bdb" stroke-width="1.5" opacity="0.2"/>
+  <circle cx="230" cy="220" r="50" fill="#3b5bdb" opacity="0.03"/>
+  <text x="230" y="216" font-size="9" fill="#0a0e1a" text-anchor="middle" font-weight="700">Buying</text>
+  <text x="230" y="230" font-size="9" fill="#0a0e1a" text-anchor="middle" font-weight="700">Committee</text>
+
+  <!-- Person icons around inner ring representing roles -->
+  <!-- CISO -->
+  <circle cx="197" cy="180" r="12" fill="#fff" filter="url(#aa2)"/>
+  <circle cx="197" cy="177" r="3.5" fill="#3b5bdb" opacity="0.2"/>
+  <path d="M191 184 Q197 189 203 184" fill="none" stroke="#3b5bdb" stroke-width="1" opacity="0.15"/>
+  <text x="197" y="200" font-size="6.5" fill="#6b7280" text-anchor="middle">CISO</text>
+
+  <!-- VP IT -->
+  <circle cx="263" cy="180" r="12" fill="#fff" filter="url(#aa2)"/>
+  <circle cx="263" cy="177" r="3.5" fill="#3b5bdb" opacity="0.2"/>
+  <path d="M257 184 Q263 189 269 184" fill="none" stroke="#3b5bdb" stroke-width="1" opacity="0.15"/>
+  <text x="263" y="200" font-size="6.5" fill="#6b7280" text-anchor="middle">VP IT</text>
+
+  <!-- Director -->
+  <circle cx="195" cy="255" r="12" fill="#fff" filter="url(#aa2)"/>
+  <circle cx="195" cy="252" r="3.5" fill="#3b5bdb" opacity="0.2"/>
+  <path d="M189 259 Q195 264 201 259" fill="none" stroke="#3b5bdb" stroke-width="1" opacity="0.15"/>
+  <text x="195" y="275" font-size="6.5" fill="#6b7280" text-anchor="middle">Director</text>
+
+  <!-- Architect -->
+  <circle cx="265" cy="255" r="12" fill="#fff" filter="url(#aa2)"/>
+  <circle cx="265" cy="252" r="3.5" fill="#3b5bdb" opacity="0.2"/>
+  <path d="M259 259 Q265 264 271 259" fill="none" stroke="#3b5bdb" stroke-width="1" opacity="0.15"/>
+  <text x="265" y="275" font-size="6.5" fill="#6b7280" text-anchor="middle">Architect</text>
+
+  <!-- Converging arrows -->
+  <line x1="150" y1="145" x2="190" y2="175" stroke="#3b5bdb" stroke-width="1" opacity="0.12"/>
+  <line x1="310" y1="145" x2="270" y2="175" stroke="#3b5bdb" stroke-width="1" opacity="0.12"/>
+  <line x1="120" y1="220" x2="170" y2="220" stroke="#3b5bdb" stroke-width="1" opacity="0.12"/>
+  <line x1="340" y1="220" x2="290" y2="220" stroke="#3b5bdb" stroke-width="1" opacity="0.12"/>
+
+  <!-- Right panel: Account Intelligence -->
+  <rect x="394" y="72" width="136" height="190" rx="10" fill="#fff" filter="url(#aa2)"/>
+  <text x="462" y="94" font-size="10" fill="#0a0e1a" text-anchor="middle" font-weight="700">What You Get</text>
+
+  <rect x="408" y="106" width="8" height="8" rx="2" fill="#3b5bdb" opacity="0.15"/>
+  <text x="422" y="114" font-size="8.5" fill="#0a0e1a">Committee leads</text>
+  <text x="422" y="126" font-size="7.5" fill="#6b7280">1- or 2-touch verified</text>
+
+  <rect x="408" y="140" width="8" height="8" rx="2" fill="#3b5bdb" opacity="0.15"/>
+  <text x="422" y="148" font-size="8.5" fill="#0a0e1a">Account intel</text>
+  <text x="422" y="160" font-size="7.5" fill="#6b7280">Engagement data</text>
+
+  <rect x="408" y="174" width="8" height="8" rx="2" fill="#3b5bdb" opacity="0.15"/>
+  <text x="422" y="182" font-size="8.5" fill="#0a0e1a">Dedicated PM</text>
+  <text x="422" y="194" font-size="7.5" fill="#6b7280">Kickoff to delivery</text>
+
+  <rect x="408" y="208" width="8" height="8" rx="2" fill="#3b5bdb" opacity="0.15"/>
+  <text x="422" y="216" font-size="8.5" fill="#0a0e1a">Campaign reports</text>
+  <text x="422" y="228" font-size="7.5" fill="#6b7280">Account + buyer data</text>
+
+  <!-- Bottom: Strategy guidance -->
+  <rect x="394" y="274" width="136" height="44" rx="8" fill="#3b5bdb" opacity="0.04"/>
+  <text x="462" y="294" font-size="9" fill="#0a0e1a" text-anchor="middle" font-weight="600">Strategic guidance</text>
+  <text x="462" y="308" font-size="8" fill="#6b7280" text-anchor="middle">ABM campaign + targeting</text>
+
+  <!-- Bottom bar -->
+  <rect x="30" y="340" width="500" height="40" rx="8" fill="#0a0e1a" opacity="0.03"/>
+  <text x="280" y="358" font-size="9" fill="#0a0e1a" text-anchor="middle" font-weight="600">Named accounts → Expanded via intent → Buying committee engaged</text>
+  <text x="280" y="372" font-size="8" fill="#6b7280" text-anchor="middle">Any list size · Look-a-like modeling · Role-level precision</text>
+</svg>

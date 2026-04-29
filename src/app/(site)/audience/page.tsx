@@ -42,40 +42,80 @@ export default function AudiencePage() {
               opt-in, verified, and actively engaged.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {SEGMENTS.map(({ name, value, suffix }) => (
-              <div
-                key={name}
-                className="relative overflow-hidden flex flex-col gap-4 p-8"
-                style={{
-                  background: 'var(--purple-900)',
-                  border: '1px solid var(--purple-900)',
-                }}
+          {/* Total DB tab box — sits centered above the frame; z-index keeps it on top */}
+          <div className="flex justify-center">
+            <div
+              className="relative z-10"
+              style={{
+                background: 'var(--orange-400)',
+                borderRadius: '14px',
+                padding: '28px 48px 24px',
+                textAlign: 'center',
+              }}
+            >
+              <p
+                className="font-mono text-[15px] uppercase tracking-[0.14em] mb-2"
+                style={{ color: 'var(--purple-900)' }}
               >
-                <p
-                  className="font-mono text-[15px] uppercase tracking-[0.14em]"
-                  style={{ color: 'var(--orange-400)' }}
+                Total Database
+              </p>
+              <p
+                className="font-display text-[64px] leading-none tracking-[-0.03em]"
+                style={{ color: 'var(--purple-900)' }}
+              >
+                48.5<em className="not-italic" style={{ color: 'rgba(42,10,74,0.45)' }}>M</em>
+              </p>
+              <p
+                className="mt-3 font-mono text-[11px] uppercase tracking-[0.1em]"
+                style={{ color: 'rgba(42,10,74,0.55)' }}
+              >
+                names in database
+              </p>
+            </div>
+          </div>
+
+          {/*
+            Frame: -20px top margin pulls it up so its slim top strip sits flush
+            with the box bottom. The box's border-radius bottom corners are filled
+            by the frame's orange, creating smooth convex rounded turns where the
+            slim strip meets the box walls.
+          */}
+          <div style={{ background: 'var(--orange-400)', padding: '20px', marginTop: '-20px' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {SEGMENTS.map(({ name, value, suffix }) => (
+                <div
+                  key={name}
+                  className="relative overflow-hidden flex flex-col gap-4 p-8"
+                  style={{
+                    background: 'var(--purple-900)',
+                    border: '1px solid var(--purple-900)',
+                  }}
                 >
-                  {name}
-                </p>
-                <p
-                  className="font-display text-[64px] leading-none tracking-[-0.03em] text-white"
-                >
-                  {value}
-                  <em className="not-italic" style={{ color: 'var(--orange-400)' }}>{suffix}</em>
-                </p>
-                <p
-                  className="mt-auto font-mono text-[11px] uppercase tracking-[0.1em]"
-                  style={{ color: 'rgba(255,255,255,0.45)' }}
-                >
-                  names in database
-                </p>
-                <ConcentricMark
-                  className="absolute -right-10 -bottom-10 w-40 h-40 pointer-events-none text-white"
-                  style={{ opacity: 0.12 }}
-                />
-              </div>
-            ))}
+                  <p
+                    className="font-mono text-[15px] uppercase tracking-[0.14em]"
+                    style={{ color: 'var(--orange-400)' }}
+                  >
+                    {name}
+                  </p>
+                  <p
+                    className="font-display text-[64px] leading-none tracking-[-0.03em] text-white"
+                  >
+                    {value}
+                    <em className="not-italic" style={{ color: 'var(--orange-400)' }}>{suffix}</em>
+                  </p>
+                  <p
+                    className="mt-auto font-mono text-[11px] uppercase tracking-[0.1em]"
+                    style={{ color: 'rgba(255,255,255,0.45)' }}
+                  >
+                    names in database
+                  </p>
+                  <ConcentricMark
+                    className="absolute -right-10 -bottom-10 w-40 h-40 pointer-events-none text-white"
+                    style={{ opacity: 0.12 }}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

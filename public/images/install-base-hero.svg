@@ -1,0 +1,95 @@
+<svg viewBox="0 0 560 400" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <filter id="ia1" x="-4%" y="-4%" width="108%" height="112%"><feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#0a0e1a" flood-opacity="0.06"/></filter>
+    <filter id="ia2" x="-4%" y="-6%" width="108%" height="116%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#0a0e1a" flood-opacity="0.06"/></filter>
+  </defs>
+  <rect x="10" y="10" width="540" height="380" rx="16" fill="#f5f6f8" filter="url(#ia1)"/>
+  <text x="40" y="46" font-size="13" font-weight="700" fill="#0a0e1a" letter-spacing="0.5">INSTALL-BASE TARGETING</text>
+  <line x1="40" y1="56" x2="520" y2="56" stroke="#e2e4e8" stroke-width="1"/>
+
+  <!-- Left panel: Tech Stack Identification -->
+  <rect x="30" y="68" width="220" height="240" rx="10" fill="#fff" filter="url(#ia2)"/>
+  <text x="140" y="92" font-size="10" fill="#0a0e1a" text-anchor="middle" font-weight="700">Technology Stack Match</text>
+  <text x="140" y="106" font-size="8" fill="#6b7280" text-anchor="middle">Technographic data identifies orgs</text>
+
+  <!-- Tech stack bars -->
+  <rect x="44" y="120" width="192" height="26" rx="5" fill="#3b5bdb" opacity="0.06"/>
+  <rect x="50" y="126" width="12" height="12" rx="2" fill="#3b5bdb" opacity="0.15"/>
+  <path d="M53 132 l3 3 l4-4" fill="none" stroke="#3b5bdb" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <text x="70" y="137" font-size="9" fill="#0a0e1a" font-weight="600">Cloud Platform</text>
+  <text x="190" y="137" font-size="7.5" fill="#3b5bdb" font-weight="600">Matched</text>
+
+  <rect x="44" y="152" width="192" height="26" rx="5" fill="#3b5bdb" opacity="0.06"/>
+  <rect x="50" y="158" width="12" height="12" rx="2" fill="#3b5bdb" opacity="0.15"/>
+  <path d="M53 164 l3 3 l4-4" fill="none" stroke="#3b5bdb" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <text x="70" y="169" font-size="9" fill="#0a0e1a" font-weight="600">Security Suite</text>
+  <text x="190" y="169" font-size="7.5" fill="#3b5bdb" font-weight="600">Matched</text>
+
+  <rect x="44" y="184" width="192" height="26" rx="5" fill="#3b5bdb" opacity="0.06"/>
+  <rect x="50" y="190" width="12" height="12" rx="2" fill="#3b5bdb" opacity="0.15"/>
+  <path d="M53 196 l3 3 l4-4" fill="none" stroke="#3b5bdb" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <text x="70" y="201" font-size="9" fill="#0a0e1a" font-weight="600">Backup Solution</text>
+  <text x="190" y="201" font-size="7.5" fill="#3b5bdb" font-weight="600">Matched</text>
+
+  <rect x="44" y="216" width="192" height="26" rx="5" fill="#0a0e1a" opacity="0.02"/>
+  <rect x="50" y="222" width="12" height="12" rx="2" fill="#e2e4e8"/>
+  <text x="70" y="233" font-size="9" fill="#6b7280">Monitoring Tool</text>
+  <text x="190" y="233" font-size="7.5" fill="#6b7280">No match</text>
+
+  <rect x="44" y="248" width="192" height="26" rx="5" fill="#3b5bdb" opacity="0.06"/>
+  <rect x="50" y="254" width="12" height="12" rx="2" fill="#3b5bdb" opacity="0.15"/>
+  <path d="M53 260 l3 3 l4-4" fill="none" stroke="#3b5bdb" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <text x="70" y="265" font-size="9" fill="#0a0e1a" font-weight="600">RMM Platform</text>
+  <text x="190" y="265" font-size="7.5" fill="#3b5bdb" font-weight="600">Matched</text>
+
+  <text x="140" y="296" font-size="8" fill="#3b5bdb" text-anchor="middle" font-weight="600">4 of 5 technologies confirmed</text>
+
+  <!-- Center: Matching engine -->
+  <rect x="260" y="140" width="40" height="100" rx="8" fill="#3b5bdb" opacity="0.06" stroke="#3b5bdb" stroke-width="0.8" opacity="0.15"/>
+  <text x="280" y="178" font-size="18" fill="#3b5bdb" text-anchor="middle" opacity="0.3">⟶</text>
+  <text x="280" y="210" font-size="7" fill="#3b5bdb" text-anchor="middle" font-weight="600">MATCH</text>
+
+  <!-- Connecting lines -->
+  <line x1="250" y1="170" x2="260" y2="175" stroke="#3b5bdb" stroke-width="1" opacity="0.15"/>
+  <line x1="250" y1="200" x2="260" y2="195" stroke="#3b5bdb" stroke-width="1" opacity="0.15"/>
+  <line x1="300" y1="175" x2="310" y2="170" stroke="#3b5bdb" stroke-width="1" opacity="0.15"/>
+  <line x1="300" y1="195" x2="310" y2="200" stroke="#3b5bdb" stroke-width="1" opacity="0.15"/>
+
+  <!-- Right panel: Verified Leads -->
+  <rect x="310" y="68" width="220" height="240" rx="10" fill="#fff" filter="url(#ia2)"/>
+  <text x="420" y="92" font-size="10" fill="#0a0e1a" text-anchor="middle" font-weight="700">Install-Verified Leads</text>
+  <text x="420" y="106" font-size="8" fill="#6b7280" text-anchor="middle">Matched buyer profile + tech fit</text>
+
+  <!-- Lead cards -->
+  <rect x="324" y="118" width="192" height="38" rx="5" fill="#3b5bdb" opacity="0.03"/>
+  <circle cx="340" cy="137" r="9" fill="#3b5bdb" opacity="0.06"/>
+  <circle cx="340" cy="134" r="3" fill="#3b5bdb" opacity="0.15"/>
+  <text x="356" y="132" font-size="9" fill="#0a0e1a" font-weight="600">IT Director</text>
+  <text x="356" y="146" font-size="7.5" fill="#6b7280">Cloud + Security confirmed</text>
+  <rect x="484" y="128" width="24" height="14" rx="4" fill="#3b5bdb" opacity="0.1"/>
+  <path d="M491 135 l2 2 l4-4" fill="none" stroke="#3b5bdb" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+
+  <rect x="324" y="162" width="192" height="38" rx="5" fill="transparent"/>
+  <circle cx="340" cy="181" r="9" fill="#3b5bdb" opacity="0.06"/>
+  <circle cx="340" cy="178" r="3" fill="#3b5bdb" opacity="0.15"/>
+  <text x="356" y="176" font-size="9" fill="#0a0e1a" font-weight="600">MSP Operations Mgr</text>
+  <text x="356" y="190" font-size="7.5" fill="#6b7280">RMM + Backup confirmed</text>
+  <rect x="484" y="172" width="24" height="14" rx="4" fill="#3b5bdb" opacity="0.1"/>
+  <path d="M491 179 l2 2 l4-4" fill="none" stroke="#3b5bdb" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+
+  <rect x="324" y="206" width="192" height="38" rx="5" fill="#3b5bdb" opacity="0.03"/>
+  <circle cx="340" cy="225" r="9" fill="#3b5bdb" opacity="0.06"/>
+  <circle cx="340" cy="222" r="3" fill="#3b5bdb" opacity="0.15"/>
+  <text x="356" y="220" font-size="9" fill="#0a0e1a" font-weight="600">CISO</text>
+  <text x="356" y="234" font-size="7.5" fill="#6b7280">Security + Cloud confirmed</text>
+  <rect x="484" y="216" width="24" height="14" rx="4" fill="#3b5bdb" opacity="0.1"/>
+  <path d="M491 223 l2 2 l4-4" fill="none" stroke="#3b5bdb" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+
+  <text x="420" y="268" font-size="8" fill="#6b7280" text-anchor="middle">Opt-in · Tech-verified · Profile-matched</text>
+  <text x="420" y="282" font-size="8" fill="#3b5bdb" text-anchor="middle" font-weight="600">Delivered to your system of choice</text>
+
+  <!-- Bottom -->
+  <rect x="30" y="320" width="500" height="56" rx="10" fill="#fff" filter="url(#ia2)"/>
+  <text x="44" y="344" font-size="9" fill="#0a0e1a" font-weight="600">Full-service program management</text>
+  <text x="44" y="360" font-size="8" fill="#6b7280">Dedicated landing page with install-base qualification · Campaign reporting · Lead delivery to CRM</text>
+</svg>

@@ -1,0 +1,74 @@
+<svg viewBox="0 0 560 400" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <filter id="xa1" x="-4%" y="-4%" width="108%" height="112%"><feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#0a0e1a" flood-opacity="0.06"/></filter>
+    <filter id="xa2" x="-4%" y="-6%" width="108%" height="116%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#0a0e1a" flood-opacity="0.06"/></filter>
+  </defs>
+  <rect x="10" y="10" width="540" height="380" rx="16" fill="#f5f6f8" filter="url(#xa1)"/>
+  <text x="40" y="46" font-size="13" font-weight="700" fill="#0a0e1a" letter-spacing="0.5">CUSTOMER EXPANSION</text>
+  <line x1="40" y1="56" x2="520" y2="56" stroke="#e2e4e8" stroke-width="1"/>
+
+  <!-- Large account container -->
+  <rect x="30" y="68" width="500" height="230" rx="14" fill="#fff" filter="url(#xa2)" stroke="#3b5bdb" stroke-width="0.8" opacity="0.15"/>
+  <text x="280" y="92" font-size="11" fill="#0a0e1a" text-anchor="middle" font-weight="700">YOUR CUSTOMER ACCOUNT</text>
+
+  <!-- Existing contacts cluster (dimmed) -->
+  <rect x="60" y="110" width="160" height="110" rx="8" fill="#0a0e1a" opacity="0.02"/>
+  <text x="140" y="130" font-size="8" fill="#6b7280" text-anchor="middle" font-weight="600" letter-spacing="0.5">CURRENT BUYERS</text>
+
+  <circle cx="90" cy="158" r="12" fill="#0a0e1a" opacity="0.04"/>
+  <circle cx="90" cy="155" r="4" fill="#0a0e1a" opacity="0.08"/>
+  <path d="M83 163 Q90 168 97 163" fill="none" stroke="#0a0e1a" stroke-width="1" opacity="0.06"/>
+  <text x="90" y="180" font-size="7" fill="#6b7280" text-anchor="middle">Known</text>
+
+  <circle cx="140" cy="158" r="12" fill="#0a0e1a" opacity="0.04"/>
+  <circle cx="140" cy="155" r="4" fill="#0a0e1a" opacity="0.08"/>
+  <path d="M133 163 Q140 168 147 163" fill="none" stroke="#0a0e1a" stroke-width="1" opacity="0.06"/>
+  <text x="140" y="180" font-size="7" fill="#6b7280" text-anchor="middle">Known</text>
+
+  <circle cx="190" cy="158" r="12" fill="#0a0e1a" opacity="0.04"/>
+  <circle cx="190" cy="155" r="4" fill="#0a0e1a" opacity="0.08"/>
+  <path d="M183 163 Q190 168 197 163" fill="none" stroke="#0a0e1a" stroke-width="1" opacity="0.06"/>
+  <text x="190" y="180" font-size="7" fill="#6b7280" text-anchor="middle">Known</text>
+
+  <!-- Expansion arrows radiating outward -->
+  <line x1="220" y1="140" x2="280" y2="120" stroke="#3b5bdb" stroke-width="1.5" opacity="0.2" stroke-dasharray="4,3"/>
+  <line x1="220" y1="160" x2="310" y2="180" stroke="#3b5bdb" stroke-width="1.5" opacity="0.2" stroke-dasharray="4,3"/>
+  <line x1="210" y1="195" x2="290" y2="240" stroke="#3b5bdb" stroke-width="1.5" opacity="0.2" stroke-dasharray="4,3"/>
+
+  <!-- New contact: Cross-sell -->
+  <rect x="280" y="104" width="130" height="40" rx="6" fill="#3b5bdb" opacity="0.04" stroke="#3b5bdb" stroke-width="0.8"/>
+  <circle cx="298" cy="124" r="9" fill="#3b5bdb" opacity="0.1"/>
+  <circle cx="298" cy="121" r="3.5" fill="#3b5bdb" opacity="0.25"/>
+  <path d="M292 128 Q298 133 304 128" fill="none" stroke="#3b5bdb" stroke-width="1" opacity="0.15"/>
+  <text x="314" y="120" font-size="9" fill="#0a0e1a" font-weight="600">Cross-Sell</text>
+  <text x="314" y="134" font-size="7.5" fill="#3b5bdb">New product buyer</text>
+
+  <!-- New contact: Upsell -->
+  <rect x="310" y="164" width="140" height="40" rx="6" fill="#3b5bdb" opacity="0.04" stroke="#3b5bdb" stroke-width="0.8"/>
+  <circle cx="328" cy="184" r="9" fill="#3b5bdb" opacity="0.1"/>
+  <circle cx="328" cy="181" r="3.5" fill="#3b5bdb" opacity="0.25"/>
+  <path d="M322 188 Q328 193 334 188" fill="none" stroke="#3b5bdb" stroke-width="1" opacity="0.15"/>
+  <text x="344" y="180" font-size="9" fill="#0a0e1a" font-weight="600">Upsell</text>
+  <text x="344" y="194" font-size="7.5" fill="#3b5bdb">Higher-tier evaluator</text>
+
+  <!-- New contact: Tier Expansion -->
+  <rect x="290" y="228" width="150" height="40" rx="6" fill="#3b5bdb" opacity="0.04" stroke="#3b5bdb" stroke-width="0.8"/>
+  <circle cx="308" cy="248" r="9" fill="#3b5bdb" opacity="0.1"/>
+  <circle cx="308" cy="245" r="3.5" fill="#3b5bdb" opacity="0.25"/>
+  <path d="M302 252 Q308 257 314 252" fill="none" stroke="#3b5bdb" stroke-width="1" opacity="0.15"/>
+  <text x="324" y="244" font-size="9" fill="#0a0e1a" font-weight="600">Add-On / Expansion</text>
+  <text x="324" y="258" font-size="7.5" fill="#3b5bdb">New module decision-maker</text>
+
+  <!-- Filter indicator top-right -->
+  <rect x="440" y="68" width="90" height="28" rx="6" fill="#fff" filter="url(#xa2)"/>
+  <text x="456" y="84" font-size="8" fill="#6b7280">Inclusion</text>
+  <text x="456" y="92" font-size="8" fill="#6b7280">+ Suppression</text>
+  <rect x="508" y="74" width="14" height="14" rx="3" fill="#3b5bdb" opacity="0.08"/>
+  <text x="515" y="84" font-size="8" fill="#3b5bdb" text-anchor="middle" font-weight="700">⊕</text>
+
+  <!-- Bottom: Value props -->
+  <rect x="30" y="310" width="500" height="66" rx="10" fill="#fff" filter="url(#xa2)"/>
+  <text x="44" y="332" font-size="9" fill="#0a0e1a" font-weight="700">Cross-sell · Upsell · Add-on expansion</text>
+  <text x="44" y="348" font-size="8.5" fill="#6b7280">Reach new decision-makers evaluating additional products, higher tiers, or add-on modules ·</text>
+  <text x="44" y="362" font-size="8.5" fill="#6b7280">Branded landing page · Full-service program management · Campaign reporting</text>
+</svg>
