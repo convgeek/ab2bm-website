@@ -1,3 +1,5 @@
+import { ProgramIcon } from '@/components/icons/ProgramIcons'
+
 interface ProgramHeroProps {
   name: string
   tagline: string
@@ -36,9 +38,12 @@ export function ProgramHero({ name, tagline, programType }: ProgramHeroProps) {
         <span className="inline-flex items-center rounded-full border border-accent/40 bg-accent/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent mb-6">
           {typeLabel}
         </span>
-        <h1 className="text-4xl font-extrabold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl">
-          {name}
-        </h1>
+        <div className="flex items-center gap-4">
+          <ProgramIcon type={programType} className="h-10 w-10 shrink-0 text-accent sm:h-12 sm:w-12 lg:h-14 lg:w-14" />
+          <h1 className="text-4xl font-extrabold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl">
+            {name}
+          </h1>
+        </div>
         {tagline && (
           <p className="mt-5 text-xl text-primary-foreground/80 leading-relaxed max-w-2xl">
             {tagline}

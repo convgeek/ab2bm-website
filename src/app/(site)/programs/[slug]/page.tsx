@@ -1,11 +1,35 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { BookOpen, Microscope, Presentation, Compass } from 'lucide-react'
 import { ProgramHero } from '@/components/sections/ProgramHero'
 import { ProgramDetail } from '@/components/sections/ProgramDetail'
-import { OptionalIngredients } from '@/components/sections/OptionalIngredients'
-import { ComplianceBlock } from '@/components/sections/ComplianceBlock'
-import { ProgramManagement } from '@/components/sections/ProgramManagement'
+import { HowItWorks } from '@/components/sections/HowItWorks'
+import { WhatYouGet } from '@/components/sections/WhatYouGet'
+import { ProgramFoundation } from '@/components/sections/ProgramFoundation'
 import { ProgramInquiryCta } from '@/components/sections/ProgramInquiryCta'
+
+const CONTENT_FORMATS = [
+  {
+    Icon: BookOpen,
+    title: 'eBooks & Whitepapers',
+    description: 'Long-form assets that establish authority and generate engaged leads at the top and middle of funnel.',
+  },
+  {
+    Icon: Microscope,
+    title: 'Original Research & Survey-Based Reports',
+    description: 'Proprietary data and benchmarking reports that give your buyers a reason to engage and share.',
+  },
+  {
+    Icon: Presentation,
+    title: 'Branded Webinars & Podcasts',
+    description: 'Audio and video programs that build audience relationships and drive pipeline through consistent engagement.',
+  },
+  {
+    Icon: Compass,
+    title: 'Maturity Models & Buyer\'s Guides',
+    description: 'Frameworks and decision tools that position your brand as the trusted guide in your category.',
+  },
+]
 
 interface ProgramData {
   _id: string
@@ -24,7 +48,7 @@ const PROGRAMS: ProgramData[] = [
     name: 'ADVANCE ENGAGE',
     slug: 'advance-engage',
     programType: 'advance-engage',
-    tagline: 'Top-of-funnel opt-in lead generation built around your content.',
+    tagline: 'Fill your funnel with opt-in leads who engage with your content.',
     solutionOverview:
       'ADVANCE ENGAGE is built for marketers who need to generate opt-in leads that engage and meet specific business and buyer criteria. It is the go-to program for content syndication and top-of-funnel demand.',
     bestFor:
@@ -36,7 +60,7 @@ const PROGRAMS: ProgramData[] = [
     name: 'ADVANCE ABM',
     slug: 'advance-abm',
     programType: 'advance-abm',
-    tagline: 'Account-based engagement that fuels your ABM strategy.',
+    tagline: 'Engage with buying committees inside your target accounts',
     solutionOverview:
       "ADVANCE ABM fuels account-based marketing strategies by generating opt-in, engaged buying committee leads within a client's target account list.",
     bestFor:
@@ -48,7 +72,7 @@ const PROGRAMS: ProgramData[] = [
     name: 'ADVANCE INSTALL',
     slug: 'advance-install',
     programType: 'advance-install',
-    tagline: 'Leads at organizations with the specific installed technology you need.',
+    tagline: 'Reach buyers at the exact accounts running the technology you displace or complement.',
     solutionOverview:
       "ADVANCE INSTALL identifies organizations with specific installed technologies and generates engaged, opt-in leads that match the client's buyer profile at those organizations.",
     bestFor:
@@ -60,7 +84,7 @@ const PROGRAMS: ProgramData[] = [
     name: 'ADVANCE BANT',
     slug: 'advance-bant',
     programType: 'advance-bant',
-    tagline: 'Sales-ready leads qualified on Budget, Authority, Need, and Timing.',
+    tagline: 'Hand your sales team leads who have confirmed budget, authority, need, and timing — ready to act now.',
     solutionOverview:
       "ADVANCE BANT delivers leads that have confirmed Budget, Authority, Need, and Timing — actively looking for solutions in the client's market category within the next six months.",
     bestFor:
@@ -72,7 +96,7 @@ const PROGRAMS: ProgramData[] = [
     name: 'ADVANCE EXPAND',
     slug: 'advance-expand',
     programType: 'advance-expand',
-    tagline: 'Cross-sell, upsell, and expansion inside your current customer base.',
+    tagline: 'Grow revenue inside your existing accounts by engaging decision-makers you haven\'t reached yet.',
     solutionOverview:
       'ADVANCE EXPAND is for marketing teams charged with expanding, cross-selling, and upselling into their current customer bases — reaching new decision-makers within existing accounts.',
     bestFor:
@@ -84,7 +108,7 @@ const PROGRAMS: ProgramData[] = [
     name: 'ADVANCE CONTENT',
     slug: 'advance-content',
     programType: 'advance-content',
-    tagline: 'Custom content and co-branded virtual events that power every campaign.',
+    tagline: 'Empower every campaign with custom content and co-branded virtual events.',
     solutionOverview:
       'ADVANCE CONTENT gives B2B vendors the impactful content their campaigns need — from short-form thought leadership and eBooks to original research, buyer\'s guides, branded podcasts, and co-branded virtual events. Every asset is built to engage your buyers and amplify the lead and demand programs that put it in front of them.',
     bestFor:
@@ -130,13 +154,15 @@ export default async function ProgramPage({
         solutionOverview={program.solutionOverview}
         bestFor={program.bestFor}
       />
+      <HowItWorks programType={program.programType} />
+      <WhatYouGet programType={program.programType} />
       {program.slug === 'advance-content' && (
-        <section className="py-16 border-t border-border bg-secondary/30">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl mb-4">
+        <section className="py-16 md:py-24 border-b border-border bg-muted/30">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold tracking-tight text-foreground mb-2">
               Powered by Conversational Geek
             </h2>
-            <p className="text-base text-muted-foreground leading-relaxed mb-6">
+            <p className="text-base text-muted-foreground leading-relaxed mb-10">
               ADVANCE CONTENT is delivered in partnership with{' '}
               <a
                 href="https://www.conversationalgeek.com/services/content-creation"
@@ -151,30 +177,23 @@ export default async function ProgramPage({
               and distribute content that your buyers actually read — and that your campaigns
               actually need.
             </p>
-            <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-3">
-              Formats include
-            </p>
-            <ul className="space-y-2 text-muted-foreground text-sm">
-              {[
-                'Blogs and thought leadership',
-                'eBooks and whitepapers',
-                'Original research and survey-based reports',
-                'Branded webinars and podcasts',
-                'Maturity models and buyer\'s guides',
-                'Derivative assets (social cards, email excerpts, landing page copy)',
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                  {item}
-                </li>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {CONTENT_FORMATS.map(({ Icon, title, description }) => (
+                <div key={title} className="rounded-lg border border-border bg-card p-6 flex gap-4">
+                  <div className="shrink-0 mt-0.5">
+                    <Icon size={20} className="text-accent" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-card-foreground mb-1">{title}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+                  </div>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </section>
       )}
-      <OptionalIngredients />
-      <ComplianceBlock />
-      <ProgramManagement />
+      {program.slug !== 'advance-content' && <ProgramFoundation />}
       <section className="py-16 border-t border-border">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <ProgramInquiryCta
