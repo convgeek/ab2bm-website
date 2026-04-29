@@ -23,11 +23,11 @@ function ProvenAtScaleFallback() {
                 Proven at Scale
               </p>
               <h2 className="text-2xl font-bold text-foreground lg:text-3xl">
-                A decade of audience development built for the IT buying journey
+                A decade of audience development built for how B2B buyers actually buy
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Technology vendors across cybersecurity, cloud, data, and enterprise software rely
-                on Advance B2B Media to reach IT buyers that other channels miss.
+                B2B vendors across technology, financial services, HR tech, sales tech, and
+                marketing tech rely on Advance B2B Media to reach buyers that other channels miss.
               </p>
               <Link
                 href="/case-studies"
@@ -39,7 +39,7 @@ function ProvenAtScaleFallback() {
             </div>
             <div className="bg-primary/5 border-t lg:border-t-0 lg:border-l border-border/50 flex flex-col justify-center gap-8 p-10 lg:p-14">
               <div className="flex flex-col">
-                <span className="text-5xl font-bold text-accent tabular-nums">48.5M</span>
+                <span className="text-5xl font-bold text-accent tabular-nums">48M+</span>
                 <span className="mt-1.5 text-sm font-medium text-muted-foreground">Opt-in B2B professionals reached</span>
               </div>
               <div className="flex flex-col">

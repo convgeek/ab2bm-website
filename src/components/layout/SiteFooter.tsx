@@ -95,8 +95,9 @@ export function SiteFooter() {
                 margin: '0 0 28px',
               }}
             >
-              Demand generation programs connecting technology vendors with IT
-              decision-makers, MSPs, and MSSPs across North America and EMEA.
+              Lead and demand generation programs connecting B2B vendors with
+              decision-makers across technology, finance, HR, sales, marketing,
+              and lines of business — North America, EMEA, and beyond.
             </p>
             <Link href="/contact" className="btn btn-accent btn-sm">
               Start a pilot

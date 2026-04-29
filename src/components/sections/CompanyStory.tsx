@@ -11,18 +11,19 @@ export function CompanyStory() {
               Our Story
             </p>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Built for the IT Buyer Others Miss
+              Built for the B2B Buyer Others Miss
             </h2>
             <div className="mt-6 space-y-4 text-base text-muted-foreground leading-relaxed">
               <p>
-                Advance B2B Media was founded to reach the technology buyers that mainstream
-                B2B media overlooks — IT practitioners, MSPs, and MSSPs making real purchasing
-                decisions.
+                Advance B2B Media was founded to reach the buyers that mainstream B2B media
+                overlooks — practitioners and decision-makers across the technology, finance,
+                HR, sales, marketing, and operational functions where real purchasing decisions
+                get made.
               </p>
               <p>
                 Our audience-first model means your content lands in front of the right people,
                 not just a large number of people. Every program is built on a decade of
-                opt-in relationship building with professionals across the IT ecosystem.
+                opt-in relationship building with B2B professionals across these six functions.
               </p>
             </div>
           </div>
@@ -36,9 +37,9 @@ export function CompanyStory() {
               </div>
               <blockquote>
                 <p className="text-lg font-medium text-foreground italic leading-relaxed">
-                  Our mission is to connect technology vendors with engaged, qualified IT
-                  professionals through media that respects the audience&apos;s time and
-                  intelligence.
+                  Our mission is to connect B2B vendors with engaged, qualified professionals —
+                  across every function where buying decisions are made — through media that
+                  respects the audience&apos;s time and intelligence.
                 </p>
               </blockquote>
             </div>

@@ -25,12 +25,12 @@ const PLACEHOLDER_PROGRAMS: Program[] = [
   },
   {
     _id: 'placeholder-webinar',
-    name: 'Custom Content For Every Program',
+    name: 'Custom Content That Powers Every Program',
     slug: { current: 'advance-content' },
-    href: '/programs#advance-content',
+    href: '/programs/advance-content',
     tagline:
       'Co-branded virtual events, thought leadership, and custom content built to fuel your campaigns — giving every program the assets it needs to engage, qualify, and convert B2B buyers.',
-    ctaLabel: 'Learn about ADVANCE CONTENT',
+    ctaLabel: 'Learn about Advance Content',
   },
 ]
 
@@ -41,11 +41,14 @@ export function ProgramsOverview({ programs }: ProgramsOverviewProps) {
     <section className="py-20 md:py-28 bg-background">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
+          <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
+            Lead and Demand Programs
+          </p>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             B2B Lead and Demand Gen, Engineered Around How You Sell
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Flexible programs that meet your buyers where they are — and your sales team where it needs them.
+            Proven lead and demand generation programs delivering B2B buyers who are actively evaluating solutions — not just browsing.
           </p>
         </div>
 

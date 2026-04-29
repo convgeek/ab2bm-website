@@ -7,7 +7,7 @@ const COMPLIANCE_PILLARS = [
   {
     title: 'Opting In / Permissioning',
     description:
-      'Our audience members actively opt in to receive relevant content from technology vendors. No cold outreach, no scraped lists — only genuinely interested, permissioned contacts.',
+      'Our audience members actively opt in to receive relevant content from B2B vendors. No cold outreach, no scraped lists — only genuinely interested, permissioned contacts.',
   },
   {
     title: 'Opt-In Recording',

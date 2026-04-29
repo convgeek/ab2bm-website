@@ -45,8 +45,8 @@ export function CgPartnership() {
                 >
                   Conversational Geek
                 </a>{' '}
-                — a B2B technology content studio. CG authors the resources, guides, and insights
-                that keep our IT pro audience engaged and reading. When your message reaches our
+                — a B2B content studio. CG authors the resources, guides, and insights
+                that keep our B2B audience engaged and reading. When your message reaches our
                 audience, they&apos;re active readers with real intent — not passive names on a list.
               </p>
             </div>

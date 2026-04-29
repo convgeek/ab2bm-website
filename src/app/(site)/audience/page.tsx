@@ -24,7 +24,7 @@ export default function AudiencePage() {
       <PageHeader
         eyebrow="Audience"
         headline="Our Audience"
-        subheadline="The B2B professionals we reach are all opted-in, verified, and are actively engaged."
+        subheadline="Opt-in. Verified. Actively engaged. Across the six B2B functions where buying decisions actually get made."
       />
 
       {/* Audience Segments */}

@@ -9,10 +9,12 @@ interface AudienceStatsProps {
 }
 
 const PLACEHOLDER_STATS: Stat[] = [
-  { label: 'Total Audience', value: '50,000+', footnote: 'Verified opt-in (estimate)' },
-  { label: 'MSPs', value: '12,000+', footnote: 'Managed Service Providers (estimate)' },
-  { label: 'MSSPs', value: '4,000+', footnote: 'Managed Security Service Providers (estimate)' },
-  { label: 'IT Decision-Makers', value: '18,000+', footnote: 'Senior IT roles (estimate)' },
+  { label: 'Total Audience', value: '48M+', footnote: 'Opt-in B2B professionals' },
+  { label: 'Technology', value: '14.5M', footnote: 'Tech decision-makers and practitioners' },
+  { label: 'Finance', value: '9.7M', footnote: 'CFOs, controllers, finance teams' },
+  { label: 'HR', value: '7.2M', footnote: 'CHROs, people ops, talent leaders' },
+  { label: 'Line of Business', value: '7.2M', footnote: 'Operational and functional buyers' },
+  { label: 'Sales & Marketing', value: '9.6M', footnote: 'Sales (4.8M) and marketing (4.8M) leaders' },
 ]
 
 export function AudienceStats({ stats }: AudienceStatsProps) {
@@ -37,15 +39,15 @@ export function AudienceStats({ stats }: AudienceStatsProps) {
             Verified Audience
           </p>
           <h2 className="text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
-            The IT Buyers You Need to Reach
+            The B2B Buyers You Need to Reach
           </h2>
           <p className="mt-3 text-primary-foreground/70 max-w-xl mx-auto">
-            A curated, opt-in audience of qualified IT professionals — not rented lists.
+            A curated, opt-in audience of qualified B2B professionals across the six functions that drive purchasing decisions — not rented lists.
           </p>
         </div>
 
         {/* Stats grid */}
-        <div className="grid grid-cols-2 gap-px bg-primary-foreground/10 overflow-hidden rounded-2xl lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-px bg-primary-foreground/10 overflow-hidden rounded-2xl lg:grid-cols-3">
           {displayStats.map((stat, index) => (
             <div
               key={index}

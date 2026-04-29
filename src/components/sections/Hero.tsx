@@ -159,10 +159,10 @@ export function Hero() {
               margin: '0 0 40px',
             }}
           >
-            Advance B2B Media connects vendors with the B2B buyers who actually
-            evaluate and purchase — a curated, opt-in audience of technology,
-            finance, marketing, and sales decision-makers across North America,
-            EMEA, and APAC.
+            Advance B2B Media connects B2B vendors with the buyers who actually
+            evaluate and purchase — a curated, opt-in audience of decision-makers
+            across technology, finance, HR, sales, marketing, and lines of business
+            in North America, EMEA, and beyond.
           </p>
 
           {/* CTA pair */}

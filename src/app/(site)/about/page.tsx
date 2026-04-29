@@ -16,7 +16,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About Us"
         headline="About Advance B2B Media"
-        subheadline="We connect technology vendors with the IT professionals who make real purchasing decisions — MSPs, MSSPs, and IT practitioners others miss."
+        subheadline="We connect B2B vendors with the professionals who make real purchasing decisions — across technology, finance, HR, sales, marketing, and the lines of business that other media miss."
       />
       <CompanyStory />
       <TeamGrid members={[]} />

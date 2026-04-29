@@ -6,9 +6,9 @@ interface FooterCtaProps {
   ctaLabel: string
 }
 
-const PLACEHOLDER_HEADLINE = 'Ready to Reach IT Decision-Makers?'
+const PLACEHOLDER_HEADLINE = 'Ready to Reach B2B Decision-Makers?'
 const PLACEHOLDER_BODY =
-  'Connect with our team to discuss your demand generation goals. Whether you need content syndication reach or an ADVANCE CONTENT program, we build the right engagement strategy for your audience.'
+  'Connect with our team to discuss your lead and demand generation goals. Whether you need top-of-funnel reach, account-based engagement, sales-ready leads, or custom content to power your campaigns, we build the right program for your audience.'
 const PLACEHOLDER_CTA_LABEL = 'Start a Conversation'
 
 export function FooterCta({ headline, body, ctaLabel }: FooterCtaProps) {

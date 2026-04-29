@@ -49,7 +49,8 @@ export function MethodologyPage({ pageHeadline, pageSubheadline }: MethodologyPa
           <div className="space-y-4 text-muted-foreground">
             <p>
               Ab2bm&apos;s audience is built — not bought. The foundation is a decade of opt-in
-              relationship building with B2B professionals across the IT ecosystem.
+              relationship building with B2B professionals across technology, finance, HR, sales,
+              marketing, and lines of business.
             </p>
             <p>The audience-building methodology centers on six interconnected activities:</p>
             <ul className="space-y-2 ml-4">
@@ -117,8 +118,18 @@ export function MethodologyPage({ pageHeadline, pageSubheadline }: MethodologyPa
       >
           <div className="space-y-4 text-muted-foreground">
             <p>
-              ADVANCE CONTENT connects your subject matter experts directly with senior
-              IT buyers via co-branded virtual events. Here is how an ADVANCE CONTENT program runs:
+              ADVANCE CONTENT connects your subject matter experts directly with senior B2B buyers
+              through custom content programs and co-branded virtual events — produced in
+              partnership with{' '}
+              <a
+                href="https://www.conversationalgeek.com/services/content-creation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary underline underline-offset-4 hover:text-primary/80 transition-colors"
+              >
+                Conversational Geek&apos;s
+              </a>{' '}
+              content creation team. Here is how an ADVANCE CONTENT program runs:
             </p>
             <ol className="space-y-2 ml-4">
               {[

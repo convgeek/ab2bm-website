@@ -84,11 +84,11 @@ const PROGRAMS: ProgramData[] = [
     name: 'ADVANCE CONTENT',
     slug: 'advance-content',
     programType: 'advance-content',
-    tagline: 'Connect your experts directly with senior IT buyers via co-branded virtual events.',
+    tagline: 'Custom content and co-branded virtual events that power every campaign.',
     solutionOverview:
-      'ADVANCE CONTENT connects your subject matter experts directly with senior IT buyers actively evaluating solutions in your market through co-branded virtual events and custom content programs.',
+      'ADVANCE CONTENT gives B2B vendors the impactful content their campaigns need — from short-form thought leadership and eBooks to original research, buyer\'s guides, branded podcasts, and co-branded virtual events. Every asset is built to engage your buyers and amplify the lead and demand programs that put it in front of them.',
     bestFor:
-      'Tech vendors who want to engage senior IT buyers in a live, interactive format with direct Q&A and real-time qualification.',
+      'Marketing teams that need technical-depth, buyer-ready content to power their lead and demand programs — without standing up an in-house production engine.',
     ctaLabel: 'Start a Conversation',
   },
 ]
@@ -130,6 +130,48 @@ export default async function ProgramPage({
         solutionOverview={program.solutionOverview}
         bestFor={program.bestFor}
       />
+      {program.slug === 'advance-content' && (
+        <section className="py-16 border-t border-border bg-secondary/30">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl mb-4">
+              Powered by Conversational Geek
+            </h2>
+            <p className="text-base text-muted-foreground leading-relaxed mb-6">
+              ADVANCE CONTENT is delivered in partnership with{' '}
+              <a
+                href="https://www.conversationalgeek.com/services/content-creation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary underline underline-offset-4 hover:text-primary/80 font-medium transition-colors"
+              >
+                Conversational Geek
+              </a>
+              , a B2B content studio whose technical writers, editors, and producers have been
+              creating content for B2B audiences for over a decade. Together, we brief, produce,
+              and distribute content that your buyers actually read — and that your campaigns
+              actually need.
+            </p>
+            <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-3">
+              Formats include
+            </p>
+            <ul className="space-y-2 text-muted-foreground text-sm">
+              {[
+                'Blogs and thought leadership',
+                'eBooks and whitepapers',
+                'Original research and survey-based reports',
+                'Branded webinars and podcasts',
+                'Maturity models and buyer\'s guides',
+                'Derivative assets (social cards, email excerpts, landing page copy)',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
       <OptionalIngredients />
       <ComplianceBlock />
       <ProgramManagement />

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { PageHeader } from '@/components/layout/PageHeader'
 
 export const metadata: Metadata = {
-  title: 'Demand Programs | Advance B2B Media',
+  title: 'Lead and Demand Programs | Advance B2B Media',
   description:
     'Six demand generation programs for technology vendors targeting IT decision-makers, MSPs, and MSSPs — from top-of-funnel content syndication to BANT-qualified pipeline.',
 }
@@ -20,16 +21,26 @@ const PROGRAMS: ProgramIndexEntry[] = [
   { _id: 'fb-install',name: 'ADVANCE INSTALL',  slug: 'advance-install', tagline: 'Leads at organizations with the specific installed technology you need.' },
   { _id: 'fb-bant',   name: 'ADVANCE BANT',     slug: 'advance-bant',    tagline: 'Sales-ready leads qualified on Budget, Authority, Need, and Timing.' },
   { _id: 'fb-expand', name: 'ADVANCE EXPAND',   slug: 'advance-expand',  tagline: 'Cross-sell, upsell, and expansion inside your current customer base.' },
-  { _id: 'fb-webinar',name: 'ADVANCE CONTENT',  slug: 'advance-content', tagline: 'Custom content and co-branded events that fuel every campaign with impact.' },
+  { _id: 'fb-webinar',name: 'ADVANCE CONTENT',  slug: 'advance-content', tagline: 'Co-branded virtual events and custom assets that power every demand program.' },
 ]
 
 export default function ProgramsPage() {
   return (
     <main>
       <PageHeader
-        eyebrow="Demand Generation"
-        headline="Demand Programs"
-        subheadline="Six programs built for technology vendors targeting IT decision-makers, MSPs, and MSSPs — from top-of-funnel content syndication to sales-ready BANT leads."
+        eyebrow="Lead and Demand Generation"
+        headline="Lead and Demand Programs"
+        subheadline="Six programs built for B2B vendors targeting decision-makers across technology, finance, HR, sales, marketing, and lines of business — from top-of-funnel engagement through sales-ready BANT leads, customer expansion, and the custom content that powers them all."
+        illustration={
+          <Image
+            src="/images/ab2bm-programs-hero.svg"
+            alt="Advance B2B Media demand programs overview"
+            width={700}
+            height={500}
+            className="w-full h-auto"
+            priority
+          />
+        }
       />
 
       <div className="py-16 md:py-24 bg-background">
