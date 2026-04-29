@@ -3,7 +3,7 @@ import { ProgramInquiryCta } from './ProgramInquiryCta'
 const FALLBACK_MECHANICS: Record<string, string> = {
   'content-syndication':
     'Reach verified IT decision-makers, MSPs, and MSSPs through our opt-in content network. Your white paper, case study, or sponsored content is distributed to our audience by topic and persona interest. Leads are delivered as name, title, company, and email — matched against your ICP criteria.',
-  webinar:
+  'advance-content':
     'Co-host a live virtual event with Ab2bm to a pre-built audience of IT pros. We handle promotion to our engaged list, manage registration, run the platform, and deliver attendee leads post-event — with attendance confirmation data included.',
 }
 

@@ -20,7 +20,7 @@ const PROGRAMS: ProgramIndexEntry[] = [
   { _id: 'fb-install',name: 'ADVANCE INSTALL',  slug: 'advance-install', tagline: 'Leads at organizations with the specific installed technology you need.' },
   { _id: 'fb-bant',   name: 'ADVANCE BANT',     slug: 'advance-bant',    tagline: 'Sales-ready leads qualified on Budget, Authority, Need, and Timing.' },
   { _id: 'fb-expand', name: 'ADVANCE EXPAND',   slug: 'advance-expand',  tagline: 'Cross-sell, upsell, and expansion inside your current customer base.' },
-  { _id: 'fb-webinar',name: 'Custom Content',   slug: 'webinar',         tagline: 'Connect your experts directly with senior IT buyers via co-branded virtual events.' },
+  { _id: 'fb-webinar',name: 'ADVANCE CONTENT',  slug: 'advance-content', tagline: 'Custom content and co-branded events that fuel every campaign with impact.' },
 ]
 
 export default function ProgramsPage() {

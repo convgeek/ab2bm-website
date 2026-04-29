@@ -112,20 +112,20 @@ export function MethodologyPage({ pageHeadline, pageSubheadline }: MethodologyPa
 
       <MethodologySection
         number="03"
-        title="Webinar Program Process"
-        testId="methodology-webinar"
+        title="ADVANCE CONTENT Program Process"
+        testId="methodology-advance-content"
       >
           <div className="space-y-4 text-muted-foreground">
             <p>
-              Ab2bm&apos;s webinar program connects your subject matter experts directly with senior
-              IT buyers via co-branded virtual events. Here is how a webinar program runs:
+              ADVANCE CONTENT connects your subject matter experts directly with senior
+              IT buyers via co-branded virtual events. Here is how an ADVANCE CONTENT program runs:
             </p>
             <ol className="space-y-2 ml-4">
               {[
-                ['Program Setup', 'Ab2bm works with you to define the webinar topic, format, speaker lineup, and target audience.'],
+                ['Program Setup', 'Ab2bm works with you to define the event topic, format, speaker lineup, and target audience.'],
                 ['Co-Branded Promotion', 'Ab2bm promotes the event to its opt-in audience using email, multi-channel outreach, and targeted engagement — driving qualified registrations.'],
                 ['Registration & Confirmation', 'Registrants confirm their attendance, validate their contact information, and are reminded in the lead-up to the event.'],
-                ['Event Delivery', 'The webinar runs on a platform selected in the program brief. Ab2bm supports with promotion, audience management, and registration logistics.'],
+                ['Event Delivery', 'The event runs on a platform selected in the program brief. Ab2bm supports with promotion, audience management, and registration logistics.'],
                 ['Lead Delivery', 'Post-event, Ab2bm delivers the full registrant and attendee list with contact data, registration details, and engagement indicators.'],
               ].map(([step, desc], i) => (
                 <li key={step} className="flex items-start gap-3 text-sm">

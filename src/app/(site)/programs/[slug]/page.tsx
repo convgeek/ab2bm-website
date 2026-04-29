@@ -81,12 +81,12 @@ const PROGRAMS: ProgramData[] = [
   },
   {
     _id: 'fb-webinar',
-    name: 'Custom Content',
-    slug: 'webinar',
-    programType: 'webinar',
+    name: 'ADVANCE CONTENT',
+    slug: 'advance-content',
+    programType: 'advance-content',
     tagline: 'Connect your experts directly with senior IT buyers via co-branded virtual events.',
     solutionOverview:
-      'Host co-branded webinars with Advance B2B Media, connecting your subject matter experts directly with senior IT buyers actively evaluating solutions in your market.',
+      'ADVANCE CONTENT connects your subject matter experts directly with senior IT buyers actively evaluating solutions in your market through co-branded virtual events and custom content programs.',
     bestFor:
       'Tech vendors who want to engage senior IT buyers in a live, interactive format with direct Q&A and real-time qualification.',
     ctaLabel: 'Start a Conversation',

@@ -8,7 +8,7 @@ const InquirySchema = z.object({
   lastName: z.string().min(1, 'Last name is required'),
   email: z.string().email('Valid email required'),
   company: z.string().min(1, 'Company is required'),
-  programType: z.enum(['advance-engage', 'advance-abm', 'advance-install', 'advance-bant', 'advance-expand', 'webinar', 'general']),
+  programType: z.enum(['advance-engage', 'advance-abm', 'advance-install', 'advance-bant', 'advance-expand', 'advance-content', 'general']),
   message: z.string().optional(),
   hutk: z.string().optional(), // HubSpot tracking cookie — sent from client
 })

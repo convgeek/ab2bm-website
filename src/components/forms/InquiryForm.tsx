@@ -13,7 +13,7 @@ const InquiryFormSchema = z.object({
   lastName: z.string().min(1, 'Last name is required'),
   email: z.string().email('Valid email required'),
   company: z.string().min(1, 'Company is required'),
-  programType: z.enum(['advance-engage', 'advance-abm', 'advance-install', 'advance-bant', 'advance-expand', 'webinar', 'general']),
+  programType: z.enum(['advance-engage', 'advance-abm', 'advance-install', 'advance-bant', 'advance-expand', 'advance-content', 'general']),
   message: z.string().optional(),
   hutk: z.string().optional(),
 })
@@ -24,8 +24,8 @@ interface InquiryFormProps {
   defaultProgram?: string
 }
 
-function isValidProgramType(value: string): value is 'advance-engage' | 'advance-abm' | 'advance-install' | 'advance-bant' | 'advance-expand' | 'webinar' | 'general' {
-  return ['advance-engage', 'advance-abm', 'advance-install', 'advance-bant', 'advance-expand', 'webinar', 'general'].includes(value)
+function isValidProgramType(value: string): value is 'advance-engage' | 'advance-abm' | 'advance-install' | 'advance-bant' | 'advance-expand' | 'advance-content' | 'general' {
+  return ['advance-engage', 'advance-abm', 'advance-install', 'advance-bant', 'advance-expand', 'advance-content', 'general'].includes(value)
 }
 
 export function InquiryForm({ defaultProgram }: InquiryFormProps) {
@@ -201,7 +201,7 @@ export function InquiryForm({ defaultProgram }: InquiryFormProps) {
           <option value="advance-install">ADVANCE INSTALL</option>
           <option value="advance-bant">ADVANCE BANT</option>
           <option value="advance-expand">ADVANCE EXPAND</option>
-          <option value="webinar">Webinar</option>
+          <option value="advance-content">ADVANCE CONTENT</option>
         </select>
         {errors.programType && (
           <p id="inquiry-programType-error" className="mt-1 text-xs text-destructive">

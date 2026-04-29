@@ -11,7 +11,7 @@ const PROGRAM_TYPE_LABEL: Record<string, string> = {
   'advance-install': 'Install Base Targeting',
   'advance-bant':    'Sales-Ready Leads',
   'advance-expand':  'Customer Expansion',
-  webinar:           'Virtual Events',
+  'advance-content': 'Virtual Events',
 }
 
 export function ProgramHero({ name, tagline, programType }: ProgramHeroProps) {

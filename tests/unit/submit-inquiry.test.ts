@@ -26,7 +26,7 @@ const validPayload = {
   lastName: 'Doe',
   email: 'jane@example.com',
   company: 'Acme Corp',
-  programType: 'webinar' as const,
+  programType: 'advance-content' as const,
   message: 'Hello',
 }
 

@@ -6,6 +6,7 @@ interface Program {
   slug: { current: string }
   tagline: string
   ctaLabel: string
+  href?: string
 }
 
 interface ProgramsOverviewProps {
@@ -15,19 +16,21 @@ interface ProgramsOverviewProps {
 const PLACEHOLDER_PROGRAMS: Program[] = [
   {
     _id: 'placeholder-content-syndication',
-    name: 'Content Syndication',
-    slug: { current: 'content-syndication' },
+    name: 'Lead and Demand Programs',
+    slug: { current: 'programs' },
+    href: '/programs',
     tagline:
-      'Distribute your thought leadership content to our verified audience of IT decision-makers, MSPs, and MSSPs — driving qualified pipeline at scale.',
-    ctaLabel: 'Learn about Content Syndication',
+      'From top-of-funnel engagement and ABM to install-base targeting, BANT-qualified leads, and customer expansion — flexible programs built around the way your team sells and the pipeline you need.',
+    ctaLabel: 'Learn about our programs',
   },
   {
     _id: 'placeholder-webinar',
-    name: 'Webinar Programs',
-    slug: { current: 'webinar' },
+    name: 'Custom Content For Every Program',
+    slug: { current: 'advance-content' },
+    href: '/programs#advance-content',
     tagline:
-      'Host co-branded webinars with Advance B2B Media, connecting your subject matter experts directly with senior IT buyers actively evaluating solutions.',
-    ctaLabel: 'Learn about Webinars',
+      'Co-branded virtual events, thought leadership, and custom content built to fuel your campaigns — giving every program the assets it needs to engage, qualify, and convert B2B buyers.',
+    ctaLabel: 'Learn about ADVANCE CONTENT',
   },
 ]
 
@@ -38,21 +41,18 @@ export function ProgramsOverview({ programs }: ProgramsOverviewProps) {
     <section className="py-20 md:py-28 bg-background">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
-            Demand Programs
-          </p>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Built for Technology Vendors
+            B2B Lead and Demand Gen, Engineered Around How You Sell
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Proven demand generation programs delivering IT buyers who are actively evaluating
-            solutions — not just browsing.
+            Flexible programs that meet your buyers where they are — and your sales team where it needs them.
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {displayPrograms.map((program) => {
             const slugCurrent = program.slug?.current ?? program._id
+            const href = program.href ?? `/programs#${slugCurrent}`
             return (
               <div
                 key={program._id}
@@ -69,7 +69,7 @@ export function ProgramsOverview({ programs }: ProgramsOverviewProps) {
                   </p>
                   <div className="mt-6 flex items-center gap-1">
                     <Link
-                      href={`/programs#${slugCurrent}`}
+                      href={href}
                       className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
                     >
                       {program.ctaLabel || 'Learn more'}
