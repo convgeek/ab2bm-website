@@ -1,89 +1,274 @@
 import Link from 'next/link'
+import { ConcentricMark } from '@/components/ui/concentric-mark'
 
-interface HeroProps {
-  headline: string
-  subheadline: string
-  ctaLabel: string
-  ctaHref: string
+/* Arrow SVG for CTA buttons */
+function Arrow() {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 16 16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="square"
+      className="btn-arrow"
+      aria-hidden="true"
+    >
+      <path d="M3 8 H13 M9 4 L13 8 L9 12" />
+    </svg>
+  )
 }
 
-const PLACEHOLDER_HEADLINE =
-  'Reaching the IT Buyers Competitors Miss'
-const PLACEHOLDER_SUBHEADLINE =
-  'Advance B2B Media connects technology vendors with the IT buyers who actually evaluate and purchase — a curated, opt-in audience of IT decision-makers, MSPs, and MSSPs across North America.'
-const PLACEHOLDER_CTA_LABEL = 'Start a Conversation'
-const PLACEHOLDER_CTA_HREF = '/contact'
-
-export function Hero({ headline, subheadline, ctaLabel, ctaHref }: HeroProps) {
-  const cleanHref = ctaHref || PLACEHOLDER_CTA_HREF
-
+/* Stat row in the right-column stats card */
+function StatRow({
+  num,
+  label,
+  divider = true,
+}: {
+  num: React.ReactNode
+  label: string
+  divider?: boolean
+}) {
   return (
-    <section className="relative overflow-hidden bg-primary py-24 md:py-32 lg:py-40">
-      {/* Decorative background: radial glow top-right */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'baseline',
+        paddingBottom: divider ? '18px' : 0,
+        borderBottom: divider ? '1px dotted rgba(255,255,255,0.15)' : 'none',
+      }}
+    >
+      <span
         style={{
-          background:
-            'radial-gradient(ellipse 80% 60% at 70% 0%, oklch(0.35 0.20 303 / 0.5), transparent)',
+          fontFamily: 'var(--font-display)',
+          fontSize: '64px',
+          lineHeight: 1,
+          fontWeight: 400,
+          letterSpacing: '-0.02em',
+          color: '#fff',
+        }}
+      >
+        {num}
+      </span>
+      <span
+        style={{
+          fontFamily: 'var(--font-mono)',
+          fontSize: '10px',
+          letterSpacing: '0.16em',
+          textTransform: 'uppercase',
+          color: 'rgba(255,255,255,0.6)',
+          maxWidth: '140px',
+          textAlign: 'right',
+        }}
+      >
+        {label}
+      </span>
+    </div>
+  )
+}
+
+export function Hero() {
+  return (
+    <section
+      style={{
+        background: 'var(--purple-900)',
+        color: '#fff',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
+      {/* Decorative concentric mark — 720×720, opacity 0.09, vertically centred right */}
+      <ConcentricMark
+        style={{
+          position: 'absolute',
+          right: '-120px',
+          top: '50%',
+          transform: 'translateY(-50%)',
+          width: '720px',
+          height: '720px',
+          opacity: 0.09,
+          zIndex: 1,
+          color: '#fff',
         }}
       />
-      {/* Orange glow blob bottom-left */}
+
+      {/* ── Hero body: 2-column grid, z-index above the mark ── */}
       <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -bottom-16 -left-16 h-64 w-64 rounded-full bg-accent/15 blur-3xl"
-      />
-
-      <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
-        {/* Eyebrow badge */}
-        <div className="inline-flex items-center rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 mb-8 backdrop-blur-sm">
-          <span className="text-xs font-semibold uppercase tracking-widest text-primary-foreground/80">
-            B2B Demand Generation for Technology Vendors
-          </span>
-        </div>
-
-        {/* Headline */}
-        <h1 className="text-4xl font-extrabold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl xl:text-7xl">
-          {headline || PLACEHOLDER_HEADLINE}
-        </h1>
-
-        {/* Subheadline */}
-        <p className="mt-6 text-lg leading-8 text-primary-foreground/80 max-w-3xl mx-auto sm:text-xl">
-          {subheadline || PLACEHOLDER_SUBHEADLINE}
-        </p>
-
-        {/* CTAs */}
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link
-            href={cleanHref}
-            className="inline-flex items-center justify-center rounded-lg bg-primary-foreground px-8 py-4 text-base font-semibold text-primary shadow-lg transition-all hover:bg-primary-foreground/90 hover:shadow-xl hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground/50"
+        style={{
+          padding: '96px 56px',
+          display: 'grid',
+          gridTemplateColumns: '1.3fr 1fr',
+          gap: '64px',
+          position: 'relative',
+          zIndex: 2,
+          alignItems: 'end',
+        }}
+      >
+        {/* Left column */}
+        <div>
+          {/* Eyebrow: orange line + mono text */}
+          <div
+            style={{
+              fontFamily: 'var(--font-mono)',
+              fontSize: '11px',
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: 'var(--orange-400)',
+              marginBottom: '32px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '14px',
+            }}
           >
-            {ctaLabel || PLACEHOLDER_CTA_LABEL}
-          </Link>
-          <Link
-            href="/contact?type=media-kit"
-            className="inline-flex items-center justify-center rounded-lg border border-primary-foreground/30 bg-primary-foreground/10 px-8 py-4 text-base font-semibold text-primary-foreground backdrop-blur-sm transition-all hover:bg-primary-foreground/20 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground/50"
-          >
-            Download Media Kit
-          </Link>
-        </div>
-
-        {/* Stats strip */}
-        <div className="mt-16 border-t border-primary-foreground/15 pt-10">
-          <div className="grid grid-cols-3 gap-4 sm:gap-8">
-            <div>
-              <p className="text-3xl font-bold text-primary-foreground sm:text-4xl">50,000+</p>
-              <p className="mt-1.5 text-sm text-primary-foreground/65">Opt-In IT Professionals</p>
-            </div>
-            <div className="border-x border-primary-foreground/15 px-4">
-              <p className="text-3xl font-bold text-primary-foreground sm:text-4xl">12,000+</p>
-              <p className="mt-1.5 text-sm text-primary-foreground/65">MSPs &amp; MSSPs</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-primary-foreground sm:text-4xl">18,000+</p>
-              <p className="mt-1.5 text-sm text-primary-foreground/65">IT Decision-Makers</p>
-            </div>
+            <span
+              style={{ width: '40px', height: '1px', background: 'var(--orange-400)', flexShrink: 0 }}
+              aria-hidden="true"
+            />
+            B2B Demand · New York · London · Dubai
           </div>
+
+          {/* Headline — italic orange <em> echoes the "2" in the logo */}
+          <h1
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: 'clamp(56px, 7vw, 104px)',
+              lineHeight: 0.9,
+              letterSpacing: '-0.02em',
+              fontWeight: 400,
+              color: '#fff',
+              margin: '0 0 32px',
+            }}
+          >
+            Reaching the B2B Buyers{' '}
+            <em style={{ fontStyle: 'italic', color: 'var(--orange-400)' }}>
+              Competitors
+            </em>{' '}
+            Miss
+          </h1>
+
+          {/* Lede */}
+          <p
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: '19px',
+              lineHeight: 1.5,
+              color: 'rgba(255,255,255,0.75)',
+              maxWidth: '540px',
+              margin: '0 0 40px',
+            }}
+          >
+            Advance B2B Media connects technology vendors with the B2B buyers who
+            actually evaluate and purchase — a curated, opt-in audience of
+            decision-makers across North America, EMEA, and beyond.
+          </p>
+
+          {/* CTA pair */}
+          <div style={{ display: 'flex', gap: '14px', alignItems: 'center', flexWrap: 'wrap' }}>
+            <Link href="/contact" className="btn btn-accent btn-lg">
+              Start a pilot
+              <Arrow />
+            </Link>
+            <Link href="/methodology" className="btn btn-secondary-dark btn-lg">
+              See how we work
+            </Link>
+          </div>
+        </div>
+
+        {/* Right column — stats card, aligned to bottom */}
+        <aside
+          style={{
+            padding: '32px',
+            border: '1px solid rgba(255,255,255,0.12)',
+            background: 'rgba(255,255,255,0.03)',
+            backdropFilter: 'blur(8px)',
+            display: 'grid',
+            gap: '24px',
+            alignSelf: 'end',
+          }}
+        >
+          <StatRow
+            num={
+              <>
+                4<em style={{ fontStyle: 'italic', color: 'var(--orange-400)' }}>8</em>.5M+
+              </>
+            }
+            label="Opt-in B2B professionals"
+          />
+          <StatRow
+            num={
+              <>
+                <em style={{ fontStyle: 'italic', color: 'var(--orange-400)' }}>8</em>K+
+              </>
+            }
+            label="Successful campaigns"
+          />
+          <StatRow
+            num={
+              <>
+                <em style={{ fontStyle: 'italic', color: 'var(--orange-400)' }}>2</em>50K+
+              </>
+            }
+            label="Leads delivered"
+            divider={false}
+          />
+        </aside>
+      </div>
+
+      {/* ── Footer meta band ── */}
+      <div
+        style={{
+          padding: '24px 56px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          borderTop: '1px solid rgba(255,255,255,0.08)',
+          fontFamily: 'var(--font-mono)',
+          fontSize: '11px',
+          letterSpacing: '0.12em',
+          textTransform: 'uppercase',
+          color: 'rgba(255,255,255,0.5)',
+          position: 'relative',
+          zIndex: 2,
+        }}
+      >
+        {/* Office locations */}
+        <div style={{ display: 'flex', gap: '20px' }}>
+          {['New York', 'London', 'Dubai'].map((city) => (
+            <span key={city} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span
+                style={{
+                  width: '5px',
+                  height: '5px',
+                  background: 'var(--orange-400)',
+                  borderRadius: '50%',
+                  flexShrink: 0,
+                }}
+                aria-hidden="true"
+              />
+              {city}
+            </span>
+          ))}
+        </div>
+
+        {/* Scroll indicator */}
+        <div
+          style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
+          aria-hidden="true"
+        >
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 16 16"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="square"
+          >
+            <path d="M8 3 V13 M4 9 L8 13 L12 9" />
+          </svg>
+          Scroll
         </div>
       </div>
     </section>

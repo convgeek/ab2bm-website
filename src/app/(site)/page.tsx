@@ -10,8 +10,8 @@ import { FooterCta } from '@/components/sections/FooterCta'
 export default function HomePage() {
   return (
     <main>
-      <Hero headline="" subheadline="" ctaLabel="" ctaHref="" />
-      <LogoStrip logos={[]} />
+      <Hero />
+      <LogoStrip />
       <ProgramsOverview programs={[]} />
       <AudienceStats stats={[]} />
       <TestimonialHighlight testimonial={null} />

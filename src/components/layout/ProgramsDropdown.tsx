@@ -27,27 +27,58 @@ export function ProgramsDropdown() {
         type="button"
         aria-haspopup="true"
         aria-expanded={open}
-        className="flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+        className="nav-link-dark flex items-center gap-1"
       >
         Programs
-        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
+
       {open && (
-        <div className="absolute top-full left-0 z-50 mt-1 w-52 rounded-lg border border-border bg-background shadow-lg py-1">
+        <div
+          className="absolute top-full left-0 z-50 mt-2 w-56 py-1"
+          style={{
+            background: 'var(--purple-800)',
+            border: '1px solid rgba(255,255,255,0.1)',
+            boxShadow: 'var(--shadow-lg)',
+          }}
+        >
           <Link
             href="/programs"
-            className="block px-4 py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground hover:bg-muted"
+            className="block px-4 py-2"
+            style={{
+              fontFamily: 'var(--font-mono)',
+              fontSize: '10px',
+              textTransform: 'uppercase',
+              letterSpacing: '0.14em',
+              color: 'rgba(255,255,255,0.55)',
+              textDecoration: 'none',
+              transition: 'color 160ms var(--ease)',
+            }}
           >
             All Programs
           </Link>
-          <div className="border-t border-border my-1" />
+          <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', margin: '4px 0' }} />
           {programLinks.map((p) => (
             <Link
               key={p.href}
               href={p.href}
-              className="block px-4 py-2 text-sm text-foreground hover:bg-muted"
+              className="block px-4 py-2 text-sm"
+              style={{
+                color: 'rgba(255,255,255,0.78)',
+                textDecoration: 'none',
+                fontWeight: 500,
+                transition: 'color 160ms var(--ease), background-color 160ms var(--ease)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = '#fff'
+                e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.06)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = 'rgba(255,255,255,0.78)'
+                e.currentTarget.style.backgroundColor = 'transparent'
+              }}
             >
               {p.label}
             </Link>
