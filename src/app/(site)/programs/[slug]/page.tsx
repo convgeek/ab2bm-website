@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { BookOpen, Microscope, Presentation, Compass } from 'lucide-react'
+import { BookOpen, Microscope, Presentation, Compass, ExternalLink, Users } from 'lucide-react'
 import { ProgramHero } from '@/components/sections/ProgramHero'
 import { ProgramDetail } from '@/components/sections/ProgramDetail'
 import { HowItWorks } from '@/components/sections/HowItWorks'
@@ -28,6 +28,11 @@ const CONTENT_FORMATS = [
     Icon: Compass,
     title: 'Maturity Models & Buyer\'s Guides',
     description: 'Frameworks and decision tools that position your brand as the trusted guide in your category.',
+  },
+  {
+    Icon: Users,
+    title: 'Live Events',
+    description: 'In-person gatherings — roundtables, executive dinners, and hosted forums — where Advance B2B drives attendance from target prospects, service provider partners, and key community voices so your brand owns the room.',
   },
 ]
 
@@ -165,21 +170,22 @@ export default async function ProgramPage({
             <p className="text-base text-muted-foreground leading-relaxed mb-10">
               ADVANCE CONTENT is delivered in partnership with{' '}
               <a
-                href="https://www.conversationalgeek.com/services/content-creation"
+                href="https://conversationalgeek.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary underline underline-offset-4 hover:text-primary/80 font-medium transition-colors"
+                className="inline-flex items-center gap-1 text-primary underline underline-offset-4 hover:text-primary/80 font-medium transition-colors"
               >
                 Conversational Geek
+                <ExternalLink size={14} className="shrink-0" />
               </a>
-              , a B2B content studio whose technical writers, editors, and producers have been
-              creating content for B2B audiences for over a decade. Together, we brief, produce,
+              , a Content Marketing Agency and B2B content studio whose technical writers, editors, and producers have been
+              creating content for technology B2B audiences for over a decade. Together, we brief, produce,
               and distribute content that your buyers actually read — and that your campaigns
               actually need.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {CONTENT_FORMATS.map(({ Icon, title, description }) => (
-                <div key={title} className="rounded-lg border border-border bg-card p-6 flex gap-4">
+              {CONTENT_FORMATS.map(({ Icon, title, description }, i) => (
+                <div key={title} className={`rounded-lg border border-border bg-card p-6 flex gap-4${i === CONTENT_FORMATS.length - 1 ? ' sm:col-span-2 sm:w-1/2 sm:mx-auto' : ''}`}>
                   <div className="shrink-0 mt-0.5">
                     <Icon size={20} className="text-accent" />
                   </div>
