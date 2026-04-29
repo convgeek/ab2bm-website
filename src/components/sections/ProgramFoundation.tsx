@@ -42,7 +42,7 @@ export function ProgramFoundation() {
         {/* Section header */}
         <div className="mb-14">
           <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl mb-4">
-            Everything Included. Configured for You.
+            Everything Included. Tailored Just for You.
           </h2>
           <p className="text-muted-foreground leading-relaxed max-w-2xl">
             Every ADVANCE program ships with full-service management and built-in global compliance
