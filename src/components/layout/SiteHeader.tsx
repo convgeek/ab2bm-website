@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { MobileMenu } from './MobileMenu'
 import { ProgramsDropdown } from './ProgramsDropdown'
 import { mainNavLinks } from './NavLinks'
@@ -16,23 +17,15 @@ export function SiteHeader() {
         className="relative flex items-center justify-between w-full"
         style={{ padding: '22px 56px' }}
       >
-        {/* Wordmark — Instrument Serif, "2" italic in orange-400 */}
-        <Link
-          href="/"
-          className="shrink-0"
-          aria-label="Advance B2B Media — home"
-          style={{
-            fontFamily: 'var(--font-display)',
-            fontSize: '26px',
-            letterSpacing: '-0.02em',
-            color: '#fff',
-            fontWeight: 400,
-            textDecoration: 'none',
-            whiteSpace: 'nowrap',
-            lineHeight: 1,
-          }}
-        >
-          Advance B<em style={{ fontStyle: 'italic', color: 'var(--orange-400)' }}>2</em>B Media
+        <Link href="/" className="shrink-0" aria-label="Advance B2B Media — home">
+          <Image
+            src="/advance_b2b_white.svg"
+            alt="Advance B2B Media"
+            width={180}
+            height={40}
+            priority
+            className="h-10 w-auto"
+          />
         </Link>
 
         {/* Desktop nav */}

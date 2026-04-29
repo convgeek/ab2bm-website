@@ -97,24 +97,26 @@ export function generateStaticParams(): { slug: string }[] {
   return PROGRAMS.map((p) => ({ slug: p.slug }))
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }
-}): Metadata {
-  const program = PROGRAMS.find((p) => p.slug === params.slug)
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
+  const { slug } = await params
+  const program = PROGRAMS.find((p) => p.slug === slug)
   return {
     title: program ? `${program.name} | Advance B2B Media` : 'Program | Advance B2B Media',
     description: program?.tagline ?? undefined,
   }
 }
 
-export default function ProgramPage({
+export default async function ProgramPage({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
-  const program = PROGRAMS.find((p) => p.slug === params.slug)
+  const { slug } = await params
+  const program = PROGRAMS.find((p) => p.slug === slug)
   if (!program) notFound()
 
   return (

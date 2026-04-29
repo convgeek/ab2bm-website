@@ -31,7 +31,7 @@ export function LogoStrip() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
         <p className="font-body text-sm font-medium uppercase tracking-wider text-center text-stone-500">
-          Trusted by leading B2B technology brands
+          Trusted by leading B2B brands
         </p>
       </div>
       <div className="group relative overflow-hidden">

@@ -1,6 +1,16 @@
 import type { Metadata } from 'next'
 import { PersonaCard } from '@/components/sections/PersonaCard'
 import { PageHeader } from '@/components/layout/PageHeader'
+import { ConcentricMark } from '@/components/ui/concentric-mark'
+
+const SEGMENTS = [
+  { name: 'Technology',       value: '14.5', suffix: 'M' },
+  { name: 'Finance',          value: '9.7',  suffix: 'M' },
+  { name: 'HR',               value: '7.2',  suffix: 'M' },
+  { name: 'Line of Business', value: '7.2',  suffix: 'M' },
+  { name: 'Sales',            value: '4.8',  suffix: 'M' },
+  { name: 'Marketing',        value: '4.8',  suffix: 'M' },
+]
 
 export const metadata: Metadata = {
   title: 'Our Audience | Advance B2B Media',
@@ -14,7 +24,7 @@ export default function AudiencePage() {
       <PageHeader
         eyebrow="Audience"
         headline="Our Audience"
-        subheadline="The IT professionals and channel partners Ab2bm reaches — opt-in, verified, and actively engaged."
+        subheadline="The B2B professionals we reach are all opted-in, verified, and are actively engaged."
       />
 
       {/* Audience Segments */}
@@ -28,40 +38,49 @@ export default function AudiencePage() {
               Audience Segments
             </h2>
             <p className="text-muted-foreground max-w-2xl">
-              Ab2bm reaches four distinct segments: IT Practitioners, IT Decision-Makers and
-              Executives, Managed Service Providers (MSPs), and Managed Security Service Providers
-              (MSSPs). Each represents a separate buying role.
+              Ab2bm reaches decision-makers and practitioners across six B2B functions — all
+              opt-in, verified, and actively engaged.
             </p>
           </div>
-          <p className="text-muted-foreground italic">Audience segment profiles coming soon.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {SEGMENTS.map(({ name, value, suffix }) => (
+              <div
+                key={name}
+                className="relative overflow-hidden flex flex-col gap-4 p-8"
+                style={{
+                  background: 'var(--purple-900)',
+                  border: '1px solid var(--purple-900)',
+                }}
+              >
+                <p
+                  className="font-mono text-[15px] uppercase tracking-[0.14em]"
+                  style={{ color: 'var(--orange-400)' }}
+                >
+                  {name}
+                </p>
+                <p
+                  className="font-display text-[64px] leading-none tracking-[-0.03em] text-white"
+                >
+                  {value}
+                  <em className="not-italic" style={{ color: 'var(--orange-400)' }}>{suffix}</em>
+                </p>
+                <p
+                  className="mt-auto font-mono text-[11px] uppercase tracking-[0.1em]"
+                  style={{ color: 'rgba(255,255,255,0.45)' }}
+                >
+                  names in database
+                </p>
+                <ConcentricMark
+                  className="absolute -right-10 -bottom-10 w-40 h-40 pointer-events-none text-white"
+                  style={{ opacity: 0.12 }}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Audience Stats */}
-      <section className="py-16 md:py-20 bg-secondary/30 border-b border-border">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
-              By the Numbers
-            </p>
-            <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
-              Audience by the Numbers
-            </h2>
-          </div>
-          <div data-testid="audience-stats">
-            <p className="text-muted-foreground italic mb-8">Verified audience data coming soon.</p>
-          </div>
-          <div
-            data-testid="methodology-note"
-            className="rounded-xl border border-border bg-background p-5 text-sm text-muted-foreground"
-          >
-            <span className="font-semibold text-foreground">Methodology: </span>
-            Audience data sourced from first-party subscription records and verified engagement metrics. Full methodology note coming soon.
-          </div>
-        </div>
-      </section>
-
-      {/* Industry & Company Size */}
+      {/* Industry & Geography */}
       <section className="py-16 md:py-24 bg-background">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
@@ -77,10 +96,10 @@ export default function AudiencePage() {
 
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-3">
-                Company Size
+                Geography
               </p>
-              <h2 className="text-2xl font-bold text-foreground mb-6">Company Size Distribution</h2>
-              <div data-testid="company-size-distribution">
+              <h2 className="text-2xl font-bold text-foreground mb-6">Geographic Disbursement</h2>
+              <div data-testid="geographic-disbursement">
                 <p className="text-muted-foreground italic">Data coming soon.</p>
               </div>
             </div>
