@@ -12,9 +12,9 @@ export function ProgramInquiryCta({ programType, ctaLabel }: ProgramInquiryCtaPr
     <div className="mt-8">
       <Link
         href={`/contact?program=${programType}`}
-        className={cn(buttonVariants({ variant: 'default', size: 'lg' }))}
+        className={cn(buttonVariants({ variant: 'accent', size: 'lg' }))}
       >
-        {ctaLabel ?? 'Start a Conversation'}
+        {ctaLabel ?? 'GET STARTED'}
       </Link>
     </div>
   )

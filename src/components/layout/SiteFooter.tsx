@@ -100,7 +100,7 @@ export function SiteFooter() {
               and lines of business — North America, EMEA, and beyond.
             </p>
             <Link href="/contact" className="btn btn-accent btn-sm">
-              Start a pilot
+              GET STARTED
             </Link>
           </div>
 

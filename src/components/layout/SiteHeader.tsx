@@ -51,7 +51,7 @@ export function SiteHeader() {
         {/* CTA */}
         <div className="hidden md:flex items-center">
           <Link href="/contact" className="btn btn-accent btn-sm">
-            Start a pilot
+            GET STARTED
           </Link>
         </div>
 
